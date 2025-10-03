@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@import "~base/global";
+
+.page {
+    header .search-mobile { padding: 0 0.9375em; }
+}
+
+.text-sm-center {
+    @include media-breakpoint-down(sm) { text-align: center; }
+}
