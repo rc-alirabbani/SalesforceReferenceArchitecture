@@ -1,0 +1,69 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceLayouts/layout.css');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusGrid.css');
+    assets.addCss('/css/experience/components/pd_assets/pdPlusParallaxScrolling.css');
+    assets.addCss('/css/experience/rwc/pdPlusParallaxScrollingExtend.css');
+</isscript>
+
+<div class="parallax-container  ${pdict.customCss}">
+<div class=" opacity" <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>></div>
+<div class="parallaxScrollingSction  ${pdict.parallaxSection}" style="background-image: url(${pdict.ParallaxScrimg});  min-height : ${pdict.sectionHeight}">
+
+     <div class="parallax-wrapper" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+        <div class="bgcolor-overlay" style= "background-color:${pdict.bgOverlay}"></div>
+            <div class="parallax-innercontainer">
+            <iscomment> If checkbox is clicked className Container will be added here else container-fluid className will be added </iscomment>
+            <div class="${pdict.isContainer}">
+                <div class="row ${pdict.textShadow}">
+                    <div class=" col-md-6 col-12 ${pdict.textAlignmentR1C1}">
+                        <isif condition="${pdict.ParallaxScrTextSectionR1C1 !== null}">
+                            <div class="text-padding" style="padding: ${pdict.TextSectionPaddingR1C1}">
+                                <div data-aos="fade-right" <isif condition="${pdict.textContentColor}"><isprint value="${pdict.textContentColor}" encoding="off" /></isif>>
+                                    <isprint value="${pdict.ParallaxScrHdSectionR1C1}" encoding="off" />
+                                </div>
+                                <div class="animation-css " data-aos="${pdict.animationType}" data-aos-duration="${pdict.animationDuration}">
+                                    <div class="parrallax-content" <isif condition="${pdict.textContentColor}"><isprint value="${pdict.textContentColor}" encoding="off" /></isif>>
+                                        <isprint value="${pdict.ParallaxScrTextSectionR1C1}" encoding="off" />
+                                    </div>
+                                </div>
+                            </div>
+                         </isif>
+                        <div class="btn-wrapper">
+                            <isif condition="${pdict.ParallaxScrbtnR1C1 !== null}">
+                                <span class="btn" <isif condition="${pdict.btnComponentColor}"><isprint value="${pdict.btnComponentColor}" encoding="off" /></isif>>
+                                    <a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>  ${pdict.ParallaxScrbtnR1C1}</a>
+                                </span>
+                            </isif>
+                        </div>
+                    </div>
+
+                    <div class=" col-md-6 col-12 ${pdict.textAlignmentR1C2}">
+                        <isif condition="${pdict.ParallaxScrTextSectionR1C2}">
+                        <div class="text-padding" style="padding: ${pdict.TextSectionPaddingR1C2}">
+                            <div data-aos="fade-right" <isif condition="${pdict.textContentColorR1C2}"><isprint value="${pdict.textContentColorR1C2}" encoding="off" /></isif>>
+                                <isprint value="${pdict.ParallaxScrHdSectionR1C2}" encoding="off" />
+                            </div>
+
+                            <div class="animation-css " data-aos="${pdict.animationType}" data-aos-duration="${pdict.animationDuration}">
+                                <div class="parrallax-content"<isif condition="${pdict.textContentColorR1C2}"><isprint value="${pdict.textContentColorR1C2}" encoding="off" /></isif>>
+                                    <isprint value="${pdict.ParallaxScrTextSectionR1C2}" encoding="off" />
+                                </div>
+                            </div>
+
+                            <div class="btn-wrapper">
+                                <isif condition="${pdict.ParallaxScrbtnR1C2 !== null}">
+                                    <span class="btn" <isif condition="${pdict.btnComponentColor}"><isprint value="${pdict.btnComponentColor}" encoding="off" /></isif>>
+                                        <a class="tile-link" href="${pdict.tileLinkR1C2}" <isif condition="${pdict.tileLinkR1C2 === true}">target="_blank"</isif>>  ${pdict.ParallaxScrbtnR1C2}</a>
+                                    </span>
+                                </isif>
+                            </div>
+                            </div>
+                        </isif>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

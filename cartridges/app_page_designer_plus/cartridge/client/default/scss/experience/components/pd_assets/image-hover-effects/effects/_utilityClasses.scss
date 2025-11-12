@@ -8,20 +8,6 @@
 
 [class^="imghvr-"],
 [class*=" imghvr-"] {
-    &:hover {
-        .ih-delay-xs { transition-delay: $transition-duration / 2; }
-
-        .ih-delay-sm { transition-delay: $transition-duration; }
-
-        .ih-delay-md { transition-delay: $transition-duration * 1.5; }
-
-        .ih-delay-lg { transition-delay: $transition-duration * 2; }
-
-        .ih-delay-xl { transition-delay: $transition-duration * 2.5; }
-
-        .ih-delay-xxl { transition-delay: $transition-duration * 3; }
-    }
-
     [class^="ih-"],
     [class*=" ih-"] { opacity: 0; }
 
@@ -55,5 +41,17 @@
             transform: translate(0, 0) scale(1) rotate(0);
             opacity: 1;
         }
+
+        .ih-delay-xs { transition-delay: $transition-duration / 2; }
+
+        .ih-delay-sm { transition-delay: $transition-duration; }
+
+        .ih-delay-md { transition-delay: $transition-duration * 1.5; }
+
+        .ih-delay-lg { transition-delay: $transition-duration * 2; }
+
+        .ih-delay-xl { transition-delay: $transition-duration * 2.5; }
+
+        .ih-delay-xxl { transition-delay: $transition-duration * 3; }
     }
 }

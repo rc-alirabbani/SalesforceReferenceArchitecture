@@ -12,7 +12,7 @@
                 </div>
                 <div class="btn-wrapper">
                     <button class="btn" <isif condition="${pdict.btnBgComponentColor}"><isprint value="${pdict.btnBgComponentColor}" encoding="off"/></isif>>
-                        <a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>> 
+                        <a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>
                             <isif condition="${pdict.buttonText}"><isprint value="${pdict.buttonText}" encoding="off"/></isif>
                         </a>
                     </button>

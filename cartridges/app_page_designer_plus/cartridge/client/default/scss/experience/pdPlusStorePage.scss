@@ -6,7 +6,7 @@ html { font-size: 1rem; }
 
 h3 { text-align: unset; }
 
-.pdPlus-wrapper {
+.pd-plus-wrapper {
     overflow: hidden;
 
     h1 {
@@ -27,7 +27,7 @@ h3 { text-align: unset; }
         }
     }
 
-    .region_square::before { padding-top: 0; }
+    .region-square::before { padding-top: 0; }
 
     [class*="experience-pd_"] {
         width: 100%;

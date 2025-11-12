@@ -107,7 +107,7 @@
     "last 2 versions",
     "ie >= 10"
   ],
-  "packageName": "app_storefront_base",
+  "packageName": "app_page_designer_plus",
   "babel": {
     "presets": [
       "env"

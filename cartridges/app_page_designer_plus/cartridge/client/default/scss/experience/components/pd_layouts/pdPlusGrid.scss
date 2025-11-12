@@ -11,7 +11,7 @@
 
     &.pdplus-3r-1c,
     &.pdplus-2r-1c {
-        [class*=experience-pd_] { height: 100%; }
+        [class*="experience-pd_"] { height: 100%; }
     }
 
     .background-img {
@@ -32,7 +32,7 @@
         span {
             width: 100%;
             height: 100%;
-            background: rgba(1, 17, 38, 0.7);
+            background: rgb(1 17 38 / 70%);
             position: absolute;
             left: 0;
             top: 0;
@@ -40,7 +40,8 @@
     }
 }
 
-.pdplus-grid-1r-1c {
+.pdplus-grid-1r-1c,
+.pdplus-grid-1r-2c {
     .container-fluid .region { padding: 0; }
 
     .background-img {

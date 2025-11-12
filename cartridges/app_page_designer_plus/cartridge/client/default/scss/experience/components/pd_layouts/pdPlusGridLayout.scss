@@ -1,0 +1,67 @@
+@import "../../variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.pdplus-component {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $font-oswald;
+
+    .pdplus-grid-wrapper {
+        position: relative;
+        z-index: 2;
+
+        .region {
+            .experience-component {
+                position: static !important;
+            }
+        }
+    }
+
+    &.parallax-bg {
+        background-attachment: fixed;
+    }
+    
+    &.normal-bg {
+        background-attachment: inherit;
+    }
+}
+
+.four-and-eight-columns .region[class*="col-"]:last-child {
+    flex-basis: 70% !important;    max-width: 70% !important;
+}
+
+.four-and-eight-columns .region[class*="col-"]:first-child {
+    flex-basis: 30% !important;    max-width: 30% !important;
+}
+
+.four-and-eight-columns .module-description img { 
+    max-width: 32px;
+}
+
+.four-and-eight-columns {
+    .module-feature {
+        .module-tile { margin: 0 auto; }
+    }
+}
+
+.policies-and-terms-page {
+    a { color: #e62329!important; }
+
+    h4 {
+        font-family: $font-oswald;
+        font-size: 150% !important;
+    }
+
+    ul {
+        li {
+            strong {
+                display: inline;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 100%;
+                font-weight: 700;
+            }
+        }
+    }
+}

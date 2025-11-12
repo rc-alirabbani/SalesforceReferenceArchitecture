@@ -3,7 +3,6 @@
 var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
 var PageRenderHelper = require('*/cartridge/experience/utilities/PageRenderHelper.js');
-var ImageTransformation = require('*/cartridge/experience/utilities/ImageTransformation.js');
 
 
 /**
@@ -19,30 +18,57 @@ module.exports.render = function (context) {
 
     var content = context.content;
     model.isContainer = content.isContainer ? 'container-fluid' : 'container';
+    model.bgOverlay = content.bgOverlay ? content.bgOverlay : '';
+    model.customCss = content.customCss ? content.customCss : '';
+    model.maxWidth = content.maxWidth ? content.maxWidth : '';
 
-    model.bgComponentColor = 'style="';
+    /* Vertical Position of text Container if found then concatenate its Class Name */
+    if (content.verticalAlignment === 'top') {
+        model.verticalAlignment = 'start';
+    } else if (content.verticalAlignment === 'center') {
+        model.verticalAlignment = 'center';
+    } else if (content.verticalAlignment === 'bottom') {
+        model.verticalAlignment = 'end';
+    }
+
+    /* Horizontal Position of text Container if found then concatenate its Class Name */
+    if (content.horizontalAlginment === 'left') {
+        model.horizontalAlginment = 'start';
+    } else if (content.horizontalAlginment === 'center') {
+        model.horizontalAlginment = 'center';
+    } else if (content.horizontalAlginment === 'right') {
+        model.horizontalAlginment = 'end';
+    }
+
+    if (content.bgImageParallax === 'Parallax') {
+        model.bgImageParallax = 'parallax-bg';
+    } else if (content.bgImageParallax === 'Normal') {
+        model.bgImageParallax = 'normal-bg';
+    }
+
+    model.BGImageProperties = 'style="';
+    if (content.backgroundImage) {
+        model.BGImageProperties += 'background-image: url(' + content.backgroundImage.file.url + ');';
+    }
+
+    if (content.bgGradiant) {
+        model.BGImageProperties += 'background-image: ' + content.bgGradiant + '; ';
+    }
+
+    if (content.sectionHeight) {
+        model.BGImageProperties += 'min-height: ' + content.sectionHeight + '; ';
+    }
+    
     if (content.backgroundColor) {
-        model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
+        model.BGImageProperties += 'background-color: ' + content.backgroundColor.value + '; ';
     }
     if (content.backgroundColorAlpha) {
-        model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
+        model.BGImageProperties += 'opacity: ' + content.backgroundColorAlpha + '%' + ';';
     }
-    model.bgComponentColor += '"';
+    model.BGImageProperties += '"';
 
-    if (content.backgroundImage) {
-        /* Image File Alt Text */
-        model.imageAlt = content.imageAlt ? content.imageAlt : '';
-
-        model.backgroundImage = {
-            src: {
-                mobile: ImageTransformation.url(content.backgroundImage, { device: 'mobile' }),
-                desktop: ImageTransformation.url(content.backgroundImage, { device: 'desktop' })
-            },
-            alt: model.imgAlt,
-            focalPointX: (content.backgroundImage.focalPoint.x * 100) + '%',
-            focalPointY: (content.backgroundImage.focalPoint.y * 100) + '%'
-        };
-    }
+    model.paddingZero = content.paddingZero;
+    model.removeGutter = content.removeGutter;
 
     /* Margin | Padding Settings */
     model.UILayout = 'style="';
@@ -56,7 +82,7 @@ module.exports.render = function (context) {
     model.UILayout += '; margin-left: ' + (content.setMarginLeft ? content.setMarginLeft : '0');
     model.UILayout += ';"';
 
-    /* Automatically register configured regions*/
+    /* Automatically register configured regions */
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
 
     return new Template('experience/components/pd_layouts/pdPlusGrid1r4c').render(model).text;

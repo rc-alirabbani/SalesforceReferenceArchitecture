@@ -68,7 +68,7 @@
 
     .bnr-img img {
         backface-visibility: hidden;
-        image-rendering: optimizeQuality;
+        image-rendering: optimizequality;
         transition: transform 0.75s ease 0s, opacity 0.3s;
         max-width: 100%;
         vertical-align: middle;

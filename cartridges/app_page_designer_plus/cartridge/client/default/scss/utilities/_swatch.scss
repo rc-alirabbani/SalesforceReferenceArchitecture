@@ -3,7 +3,10 @@
 
 @mixin swatch($diameter, $color) {
     @include circle($diameter, $color);
+    /* stylelint-disable-next-line scss/at-mixin-argumentless-call-parentheses */
     @include swatch-check-mark();
+
+    /* stylelint-enable-next-line scss/at-mixin-argumentless-call-parentheses */
 
     border: 0.063em solid rgba($black, 0.3);
     display: inline-block;
@@ -25,7 +28,7 @@
         content: "\f058";
         color: $black;
         display: table-caption;
-        font-family: "FontAwesome";
+        font-family: FontAwesome, sans-serif;
         font-size: 1.625em;
         left: 0.295em;
         position: absolute;
@@ -33,7 +36,7 @@
 
     &.color-value.selected::after {
         content: "\f058";
-        font-family: "FontAwesome";
+        font-family: FontAwesome, sans-serif;
         width: 0.8em;
         height: 0.75em;
         border-radius: 50%;
@@ -65,10 +68,10 @@ $swatch-colors: (
 );
 
 @each $color in map-keys($swatch-colors) {
-    $colorValue: #{map-get($swatch-colors, $color)};
+    $color-value: #{map.get($swatch-colors, $color)};
 
     .swatch-circle-#{$color} {
-        @include circle(2.5em, $colorValue);
+        @include circle(2.5em, $color-value);
 
         display: block;
         position: relative;
@@ -79,9 +82,9 @@ $swatch-colors: (
     }
 
     .swatch-filter-#{$color} {
-        @include circle(1.38em, $colorValue);
+        @include circle(1.38em, $color-value);
 
-        background-color: $colorValue;
+        background-color: $color-value;
         display: block;
         position: relative;
 
@@ -93,7 +96,25 @@ $swatch-colors: (
 .swatch-circle-miscellaneous {
     width: 2.5em;
     height: 2.5em;
-    background: linear-gradient(0deg, rgba(130, 30, 145, 1) 0, rgba(130, 30, 145, 1) 25%, rgba(237, 209, 52, 1) 25%, rgba(255, 255, 0, 1) 50%, rgba(237, 209, 52, 1) 50%, #59ba00 50%, #59ba00 76%, #111 76%, #111 100%), linear-gradient(0deg, rgba(14, 92, 209, 1) 0, rgba(14, 92, 209, 1) 50%, rgba(226, 11, 11, 1) 50%, rgba(226, 11, 11, 1) 100%);
+    background: linear-gradient(
+        0deg,
+        rgb(130 30 145 / 100%) 0,
+        rgb(130 30 145 / 100%) 25%,
+        rgb(237 209 52 / 100%) 25%,
+        rgb(255 255 0 / 100%) 50%,
+        rgb(237 209 52 / 100%) 50%,
+        #59ba00 50%,
+        #59ba00 76%,
+        #111 76%,
+        #111 100%
+    ),
+    linear-gradient(
+        0deg,
+        rgb(14 92 209 / 100%) 0,
+        rgb(14 92 209 / 100%) 50%,
+        rgb(226 11 11 / 100%) 50%,
+        rgb(226 11 11 / 100%) 100%
+    );
     background-repeat: repeat-y, repeat;
     background-size: 50% 100%, 100% 100%;
     border: 0.063em solid rgba($black, 0.3);

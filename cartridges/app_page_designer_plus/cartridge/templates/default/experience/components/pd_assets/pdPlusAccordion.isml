@@ -1,24 +1,28 @@
 <iscomment> PD Plus collapse Component  </iscomment>
 
-<div class="accordion-item ${pdict.accrBorderRadius}">
-    <button class="accordion-button" 
-        type="button" data-bs-toggle="collapse" aria-expanded="true" 
+<div class="accordion-item ${pdict.accrBorderRadius} module-${pdict.customClass}">
+    <button class="accordion-button ${pdict.collapsibleActive ? 'active' : ''}"
+        type="button" data-bs-toggle="collapse" aria-expanded="true"
         <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>
     >
-    
+
         <iscomment> Accordion Item </iscomment>
-        <div class="according-heading">
-            <isprint value="${pdict.accodionItem}" encoding="off" />
-        </div>
-        <i class="fa fa-angle-down"></i>
+        <isif condition="${pdict.accodionItem}">
+            <div class="according-heading" style="font-size:${pdict.h1Configurations.fontSize}; margin:${pdict.h1Configurations.marginHeading}; padding:${pdict.h1Configurations.paddingHeading}; font-family: ${pdict.h1Configurations.font}; color:${pdict.h1Configurations.fontColor}; font-weight:${pdict.h1Configurations.fontWeight}; text-shadow: ${pdict.h1Configurations.fontShadow};">
+                <isprint value="${pdict.accodionItem}" encoding="off" />
+            </div>
+            <i class="fa fa-angle-down"></i>
+        </isif>
     </button>
 
     <div class="inner ${pdict.hideBorder ? 'hide-border-detail' : ''}" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
         <div class="accordion-body">
             <iscomment> Accordion item Detail</iscomment>
-            <div class="accordion-detail"  <isif condition="${pdict.itemDetailStyles}"><isprint value="${pdict.itemDetailStyles}" encoding="off" /></isif>>
-                <isprint value="${pdict.accordionDetail}" encoding="off" />
-            </div>
+            <isif condition="${pdict.accordionDetail}">
+                <div class="accordion-detail" style="font-size:${pdict.para1Configurations.fontSize}; margin:${pdict.para1Configurations.marginHeading}; padding:${pdict.para1Configurations.paddingHeading}; font-family: ${pdict.para1Configurations.font}; color:${pdict.para1Configurations.fontColor}; font-weight:${pdict.para1Configurations.fontWeight}; text-shadow: ${pdict.para1Configurations.para1Shadow};">
+                    <isprint value="${pdict.accordionDetail}" encoding="off" />
+                </div>
+            </isif>
         </div>
     </div>
 </div>

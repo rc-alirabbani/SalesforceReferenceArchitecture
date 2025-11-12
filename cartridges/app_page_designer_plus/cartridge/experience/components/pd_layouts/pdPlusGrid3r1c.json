@@ -9,28 +9,114 @@
             "description": "The visual display of the container.",
             "attribute_definitions": [
                 {
+                    "id": "customCss",
+                    "name": "Add class name for custom styles",
+                    "description": "Please add class name for custom styles",
+                    "type": "string",
+                    "required": false
+                },
+                {
                     "id": "isContainer",
-                    "name": "Layout Fluid",
+                    "name": "Layout Container Fluid",
                     "description": "Set layout fluid or at center",
                     "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "paddingZero",
+                    "name": "Remove Padding from Container Fluid",
+                    "description": "Remove Padding from Container Fluid",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "removeGutter",
+                    "name": "Remove Gutter Space within Columns",
+                    "description": "Remove Gutter Space within Columns",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "maxWidth",
+                    "name": "Add max-width of container",
+                    "description": "Please maximum width of container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "verticalAlignment",
+                    "name": "Position of container along y-axis",
+                    "description": "Position of text container along vertical direction",
+                    "type": "enum",
+                    "values": [
+                        "top",
+                        "center",
+                        "bottom"
+                    ],
+                    "default_value": "center",
+                    "required": false
+                },
+                {
+                    "id": "horizontalAlginment",
+                    "name": "Position of container along x-axis",
+                    "description": "Position of text container along horizontal direction",
+                    "type": "enum",
+                    "values": [
+                        "left",
+                        "center",
+                        "right"
+                    ],
+                    "default_value": "center",
+                    "required": false
+                },
+                {
+                    "id": "bgImageParallax",
+                    "name": "Please select the background type ",
+                    "description": "Background type e.g (Parallax/Fixed)",
+                    "type": "enum",
+                    "values": [
+                        "Parallax",
+                        "Normal"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "sectionHeight",
+                    "name": "Section Height i.e. 20px / 1.25rem",
+                    "description": "Provide height value applied section Height",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "bgOverlay",
+                    "name": "Background Image Overlay Color in (RGBA)",
+                    "description": "Provide overlay color of background",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "bgGradiant",
+                    "name": "Background Gradiant Color",
+                    "description": "Provide gradiant color of background",
+                    "type": "string",
                     "required": false
                 },
                 {
                     "id": "backgroundColor",
                     "name": "Specify Background Color",
                     "description": "Set Background Color",
-                    "type": "custom",
                     "required": false,
+                    "type": "custom",
                     "editor_definition": {
                         "type": "themer.colorpicker"
                     }
                 },
                 {
                     "id": "backgroundColorAlpha",
-                    "name": "Specify Background Color Alpha between 10 to 100",
-                    "description": "Set Background Color alpha between 10 to 100",
+                    "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
+                    "description": "Set Background Color alpha between 0 and 1",
                     "type": "enum",
-                    "default_value": 70,
+                    "default_value": 100,
                     "values": [
                         10,
                         20,
@@ -50,13 +136,6 @@
                     "name": "Specify Background Image",
                     "description": "Set background Image",
                     "type": "image",
-                    "required": false
-                },
-                {
-                    "id": "imageAlt",
-                    "name": "Specify Image Alt text",
-                    "description": "Set Image alt text",
-                    "type": "string",
                     "required": false
                 }
             ]

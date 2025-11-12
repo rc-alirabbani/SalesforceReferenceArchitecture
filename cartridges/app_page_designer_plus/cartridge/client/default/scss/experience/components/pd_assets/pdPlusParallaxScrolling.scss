@@ -1,5 +1,14 @@
 @import "../../../variables";
 
+.bgcolor-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
 .section-background {
     background-attachment: fixed;
     background-position: center;
@@ -8,13 +17,13 @@
 }
 
 .parallaxScrollingSction {
-    height: 300px;
-    background-color: rgba(255, 255, 255, 0.3);
+    min-height: 300px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: $white;
+    position: relative;
 
     @include media-breakpoint-down(sm) {
         height: auto;
@@ -59,13 +68,13 @@
 
         @include media-breakpoint-down(md) {
             max-width: 100%;
-            padding: 0 30px !important;
         }
 
         p {
-            font-size: 18px;
+            font-size: 1em;
             line-height: 1.8;
             margin-bottom: 20px;
+            font-weight: 400;
 
             span {
                 color: inherit !important;
@@ -73,10 +82,9 @@
         }
 
         .btn {
-            min-height: 50px;
-            padding: 0 20px;
-            border-radius: 8px;
-            text-transform: capitalize;
+            border-radius: 800px;
+            padding: 10px 20px;
+            font-size: 16px;
         }
     }
 }

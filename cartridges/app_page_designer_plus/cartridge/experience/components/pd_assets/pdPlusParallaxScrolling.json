@@ -2,12 +2,50 @@
     "name": "PD Plus Parallax Scrolling",
     "description": "Display Content Parallax Scrolling",
     "group": "pd_assets",
-    "attribute_definition_groups": [
+    "attribute_definition_groups": [        
         {
             "id": "ParallaxScrollingComponent",
             "name": "Parallax Scrolling Configurations",
             "description": "This component will display Parallax Scrolling.",
             "attribute_definitions": [
+                {
+                    "id": "customCss",
+                    "name": "Add class name for custom styles",
+                    "description": "Please add class name for custom styles",
+                    "type": "string",
+                    "required": false
+                },
+                 {
+                    "id": "isContainer",
+                    "name": "Layout Fluid",
+                    "description": "Set layout fluid or at center",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "parallaxSection",
+                    "name": "Please select the background type ",
+                    "description": "Background type e.g (Parallax/Fixed)",
+                    "type": "enum",
+                    "values": [
+                        "Parallax",
+                        "Normal"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "ParallaxScrimg",
+                    "name": "Parallax Scrolling Section background Image",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "bgOverlay",
+                    "name": "Background Image Overlay Color in (RGBA)",
+                    "description": "Provide overlay color of background i.e rgba(0, 0, 0, .7)",
+                    "type": "string",
+                    "required": false
+                },
                 {
                     "id": "sectionHeight",
                     "name": "parallax Section Height i.e. 20px / 1.25rem",
@@ -16,23 +54,113 @@
                     "required": false
                 },
                 {
+                    "id": "sectionWidth",
+                    "name": "parallax Section width i.e. 50% / 80%",
+                    "description": "Provide width value applied column width",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setColumnPosition",
+                    "name": "Please select Column alignment",
+                    "description": "select Column alignment e.g (Left/Right/Center)",
+                    "type": "enum",
+                    "values": [
+                        "left",
+                        "right",
+                        "center"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "backgroundColor",
+                    "name": "Specify Background Color",
+                    "description": "Set Background Color",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "backgroundColorAlpha",
+                    "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
+                    "description": "Set Background Color alpha between 0 and 1",
+                    "type": "enum",
+                    "default_value": 100,
+                    "values": [
+                        10,
+                        20,
+                        30,
+                        40,
+                        50,
+                        60,
+                        70,
+                        80,
+                        90,
+                        100
+                    ],
+                    "required": false
+                },                
+                {
+                    "id": "ParallaxScrBannerHeading",
+                    "name": "Parallax Scrolling Banner Heading",
+                    "type": "markup",
+                    "required": false
+                },
+
+                {
+                    "id": "parallaxSectionheading",
+                    "name": "Please select the heading Type ",
+                    "description": "Heading type e.g (Banner Heading/Normal)",
+                    "type": "enum",
+                    "values": [
+                        "large heading",
+                        "Small Heading"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "hdAlignment",
+                    "name": "Please select Hading alignment",
+                    "description": "select heading alignment e.g (Left/Right/Center)",
+                    "type": "enum",
+                    "values": [
+                        "left",
+                        "right",
+                        "center"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "listItemTwoCol",
+                    "name": "Please select List Item Column",
+                    "description": "select List Item Column e.g (1 Column/2 Column)",
+                    "type": "enum",
+                    "values": [
+                        "list 1 Column",
+                        "list 2 Column"
+                    ],
+                    "required": false
+                },
+
+                {
                     "id": "ParallaxScrTextSection",
                     "name": "Parallax Scrolling Text Section",
                     "type": "markup",
-                    "required": true
+                    "required": false
                 },
                 {
-                  "id": "ParallaxScrbtn",
-                  "name": "Text on Anchor Button",
-                  "type": "string",
-                  "required": false
-                },
-                {
-                  "id": "ParallaxScrimg",
-                  "name": "Parallax Scrolling Section background Image",
-                  "type": "image",
-                  "required": false
-                },
+                    "id": "textShadow",
+                    "name": "Please select the text shadow type",
+                    "description": "Shadow type e.g (Parallax/Fixed)",
+                    "type": "enum",
+                    "values": [
+                        "Text White Shadow",
+                        "Text Black Shadow"
+                    ],
+                    "required": false
+                },                
                 {
                     "id": "textAlignment",
                     "name": "Please select text alignment",
@@ -45,6 +173,7 @@
                     ],
                     "required": false
                 },
+
                 {
                     "id": "textColor",
                     "name": "Specify Content Text Color",
@@ -54,6 +183,13 @@
                     "editor_definition": {
                         "type": "themer.colorpicker"
                     }
+                },
+                
+                {
+                  "id": "ParallaxScrbtn",
+                  "name": "Text on Anchor Button",
+                  "type": "string",
+                  "required": false
                 },
                 {
                     "id": "tileLink",
@@ -98,17 +234,6 @@
                     "editor_definition": {
                         "type": "themer.colorpicker"
                     }
-                },
-                {
-                    "id": "parallaxSection",
-                    "name": "Please select the background type ",
-                    "description": "Background type e.g (Parallax/Fixed)",
-                    "type": "enum",
-                    "values": [
-                        "Parallax",
-                        "Normal"
-                    ],
-                    "required": false
                 }
             ]
         },

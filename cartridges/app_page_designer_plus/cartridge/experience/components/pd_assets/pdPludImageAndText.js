@@ -3,7 +3,6 @@
 var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
 var ImageTransformation = require('*/cartridge/experience/utilities/ImageTransformation.js');
-var PageRenderHelper = require('*/cartridge/experience/utilities/PageRenderHelper.js');
 
 
 /**
@@ -22,7 +21,7 @@ module.exports.render = function (context) {
     model.image = ImageTransformation.getScaledImage(content.image);
     model.link = content.ITCLink ? content.ITCLink : '#';
     model.alt = content.alt ? content.alt : null;
-        /* Product hover text color */
+    /* Product hover text color */
     model.styletileTextColor = 'style="';
     if (content.tileTextColor) {
         model.styletileTextColor += 'color: ' + content.tileTextColor.value + '; ';  
@@ -51,7 +50,7 @@ module.exports.render = function (context) {
         model.overlaydirection = 'left';
     }
 
-    /* product text direction*/
+    /* product text direction */
 
     if (content.podTextDirection === 'top') {
         model.stylepodTextDirection = 'top';

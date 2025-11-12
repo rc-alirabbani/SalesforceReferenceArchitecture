@@ -1,0 +1,186 @@
+@import "../variables";
+
+.RadomesTMContentSection  {
+    font-family: $font-oswald;
+
+    .TextSection {
+        margin-bottom: 100px;
+
+        .image-detail {
+            h1,
+            h2,
+            h3,
+            h4,
+            p { font-family: $font-oswald; }
+        }
+    }
+
+    .textShadow {
+        h1 {
+            font-size:  300% !important;
+            line-height: 1.4;
+    
+            &.bannerHeading {
+                font-size:  500% !important;
+                line-height: 1.4;
+            }
+        }
+
+        h2 {
+            font-size:  250% !important;
+            line-height: 1.4;
+        }
+
+        h3 {
+            font-size:  200% !important;
+            line-height: 1.4;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 { text-shadow: 2px 2px 2px $black; }
+    
+        p,
+        ul li { text-shadow: 1px 1px 1px $black; }
+    }
+
+    h1 {
+        font-size:  300% !important;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size:  250% !important;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size:  200% !important;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        font-size:  175% !important;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .image-detail {
+        color: inherit !important;
+
+        h3,
+        p { color: inherit !important; }
+    }
+
+    .txt-white-shadow {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-shadow: 1px 1px 1px #fff;
+            color: #000 !important;
+
+            > strong {
+                text-shadow: inherit;
+                color: inherit;
+            }
+        }
+
+        h1 {
+            text-shadow: 2px 2px 2px #fff;
+
+            > strong {
+                text-shadow: inherit;
+                color: inherit !important;
+            }
+        }
+
+        p {
+            text-shadow: 1px 1px 1px #fff;
+
+            > strong {
+                text-shadow: inherit;
+                color: inherit;
+            }
+        }
+
+        ul {
+            li {
+                text-shadow: 1px 1px 1px #fff;
+                color: #000;
+    
+                > strong {
+                    text-shadow: inherit;
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    .txt-black-shadow {
+        h1,h2,h3,h4,h5,h6 {
+            text-shadow: 1px 1px 1px #000;
+            color: #fff;
+
+            > strong {
+                text-shadow: inherit;
+                color: inherit !important;
+            }
+        }
+
+        h1 {
+            text-shadow: 2px 2px 2px #000;
+            color: #fff;
+
+            > strong {
+                text-shadow: inherit;
+                color: inherit!important;
+            }
+        }
+
+        p {
+            color: #fff;
+            text-shadow: 1px 1px 1px #000;
+
+            > strong {
+                text-shadow: inherit;
+                color: inherit !important;
+            }
+        }
+
+        ul {
+            li {
+                color: #fff;
+                text-shadow: 1px 1px 1px #000;
+    
+                > strong {
+                    text-shadow: inherit;
+                    color: inherit !important;
+                }
+            }
+        }
+    }
+
+    .text-end {
+        text-align: right; 
+        @include media-breakpoint-down(md) { 
+            text-align: left;
+        }
+    }
+
+    .text-start { text-align: left; }
+
+    .text-center { text-align:center; }
+}
