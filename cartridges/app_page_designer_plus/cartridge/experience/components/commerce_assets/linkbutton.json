@@ -1,0 +1,49 @@
+{
+  "name": "Link Button",
+  "description": "Select a button URL component",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+        {
+          "id": "linkbutton",
+          "name": "Custom Button Configurations",
+          "description": "This component will display button and its URL or Link",
+          "attribute_definitions": [
+                {
+                    "id": "getStartedModal",
+                    "name": "Use Check Box If Button is Get Started Modal",
+			        "description": "This Check box for Get Started Modal",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "buttonText",
+                    "name": "Button for Text Editor",
+                    "description": "This is the button for text content area",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "tileLink",
+                    "name": "Link on Anchor Button",
+                    "description": "Provide the Link URL of Anchor Button.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtab",
+                    "name": "New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "customClassName",
+                    "name": "Custom Class Name",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+  "region_definitions": []
+}

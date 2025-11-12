@@ -1,0 +1,56 @@
+{
+	"name": "Promotional Banner",
+	"description": "Bannre for promotional with redirect on spacifice URL",
+	"group": "commerce_assets",
+	"attribute_definition_groups": [
+		{
+			"id": "bannerClassWrapper",
+			"name": "Banner Class for Wrapper",
+			"description": "Banner Class for CSS Styling",
+			"attribute_definitions": [
+				{
+					"id": "bannerClass",
+					"name": "Specify the Banner Class Name",
+					"description": "Provide the Banner Class Name.",
+					"type": "string",
+					"required": false
+				}
+			]
+		},
+		{
+			"id": "bannerImage",
+			"name": "Banner Images",
+			"description": "The visual display of the banner image in the background.",
+			"attribute_definitions": [
+				{
+					"id": "image",
+					"name": "Banner Desktop Image",
+					"description": "The visual display of the desktop banner image in the background.",
+					"type": "image",
+					"required": false
+				},
+				{
+					"id": "imageAlt",
+					"name": "Specify the alternative text for Image",
+					"description": "Provide the Alt text for Image",
+					"type": "string",
+					"required": false
+				}
+			]
+		},
+		{
+			"id": "acimaShopNowLink",
+			"name": "Shop Now Link Button",
+			"description": "The Shop Now link on the button",
+			"attribute_definitions": [
+				{
+					"id": "acimaBtnLink",
+					"name": "Button Link",
+					"type": "url",
+					"required": false
+				}
+			]
+		}
+	],
+	"region_definitions": []
+}

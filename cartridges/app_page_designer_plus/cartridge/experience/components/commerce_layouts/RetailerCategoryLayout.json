@@ -1,0 +1,27 @@
+{
+    "name": "Retailer Categories Layout",
+    "description": "Retailer categories displayed with a circular image",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "retailersectionClass",
+            "name": "Retailer Category Wrapper Class",
+            "description": "Section Class for CSS Styling",
+            "attribute_definitions": [
+                {
+                    "id": "retailersectionClass",
+                    "name": "Specify the Section Class Name",
+                    "description": "Provide the Section Class Name.",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id":"retailerCategory",
+            "name":"Category Item"
+        }
+    ]
+}

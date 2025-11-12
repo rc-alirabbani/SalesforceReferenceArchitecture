@@ -1,0 +1,14 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+
+<iscomment> PD Plus Accordion Layout wrapper </iscomment>
+<div class="PromoTileLayout">
+    <iscomment> If checkbox is clicked className Container will be added here else container-fluid className will be added </iscomment>
+    <div>
+        ${pdict.promoTitle}
+    </div>
+    <div>
+        <isprint value="${pdict.regions.promoTileLayout.render()}" encoding="off" />
+    </div>
+</div>

@@ -1,0 +1,43 @@
+{
+    "name": "Case Study Detail Component",
+    "description": "Case Study Component with Heading, Date and Detail Text",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "caseTileDetailCompnent",
+            "name": "Case Study Detail Component",
+            "description": "Case Study Detail to be Displayed.",
+            "attribute_definitions": [
+                {
+                    "id": "newsHeading",
+                    "name": "Case Study Tile Component Heading",
+                    "description": "Case Study Tile Heading to be displayed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "newsSubHeading",
+                    "name": "Case Study Tile Component Sub Heading",
+                    "description": "Case Study Tile Heading to be displayed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "newsTileDate",
+                    "name": "Case Study Overview / Date",
+                    "description": "Case Tile date / Overview Text to be displayed. e.g. 04/12/2025 / Overview",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "newsDetail",
+                    "name": "Case Study Detail text area",
+                    "description": "This is the Case Study Detail rich text content area",
+                    "type": "markup",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

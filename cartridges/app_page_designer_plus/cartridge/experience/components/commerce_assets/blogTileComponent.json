@@ -1,0 +1,57 @@
+{
+    "name": "Blog Tile Component",
+    "description": "Blog Tile with Heading, Date Image",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "blogTileCompnent",
+            "name": "Blog Tile Component",
+            "description": "Blog Tile to be Displayed.",
+            "attribute_definitions": [
+                {
+                    "id": "blogTileID",
+                    "name": "Blog Tile Component Tag/ID",
+                    "description": "Blog Tile Tag to be displayed. For Customers / For Partners",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "blogTileHeading",
+                    "name": "Blog Tile Component Heading",
+                    "description": "Blog Heading to be displayed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "blogTileDate",
+                    "name": "Blog Tile Date",
+                    "description": "Blog date to be displayed. e.g. 04, 30, 2024",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "blogTileImage",
+                    "name": "Blog Tile Component Image",
+                    "description": "Blog Image to be displayed.",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "blogTileImageAlt",
+                    "name": "Blog Image Alt",
+                    "description": "Blog Image Alt to be displayed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "blogTileLink",
+                    "name": "Blog Tile Link",
+                    "description": "Blog Tile Link to be displayed.",
+                    "type": "url",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

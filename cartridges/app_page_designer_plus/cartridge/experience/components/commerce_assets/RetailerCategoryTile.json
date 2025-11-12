@@ -1,0 +1,43 @@
+{
+    "name": "Retailer Category Tile",
+    "description": "Shop Category Tile displayed with a circular image.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "retailerCategory",
+            "name": "Retailer Category",
+            "description": "Specify the Retailer Category to be displayed.",
+            "attribute_definitions": [
+                {
+                    "id": "category",
+                    "name": "Category",
+                    "description": "Select Category to be displayed.",
+                    "type": "category",
+                    "required": true
+                },
+                {
+                    "id": "image",
+                    "name": "Image Tile Component Image",
+                    "description": "Select a photo to be displayed",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "imageAlt",
+                    "name": "Alternate Text of Image",
+                    "description": "The image alt text shown by the component.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "catDisplayName",
+                    "name": "Custom Display Name",
+                    "description": "Overwrite the category name if needed.",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

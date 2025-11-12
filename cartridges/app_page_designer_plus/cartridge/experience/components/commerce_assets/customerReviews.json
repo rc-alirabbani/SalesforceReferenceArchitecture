@@ -1,0 +1,43 @@
+{
+    "name": "Customer Reviews Component",
+    "description": "News Component with Heading and Date",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "customerReviewsCompnent",
+            "name": "Customer Reviews Component",
+            "description": "Customer Reviews to be displayed.",
+            "attribute_definitions": [
+                {
+                    "id": "reviewsCategory",
+                    "name": "Reviews Category Text",
+                    "description": "Reviews Category e.g. (Customer Service,Purchase Options,Credit Alternative,Flexible Payments).",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "reviewHeading",
+                    "name": "Reviews Tile Component Heading",
+                    "description": "Reviews Tile Heading to be displayed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "reviewsDetailText",
+                    "name": "Reviews Tile Detail Text",
+                    "description": "Reviews Tile Detail to be displayed.",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id": "reviewerName",
+                    "name": "Reviews Tile Name",
+                    "description": "Reviewer Name to be displayed.",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

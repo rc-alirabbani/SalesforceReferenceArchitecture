@@ -1,0 +1,49 @@
+{
+  "name": "Text Heading",
+  "description": "Header text heading component",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+        {
+            "id": "heading",
+            "name": "Heading Text",
+            "description": "Specify the heading to be displayed above the component",
+            "attribute_definitions": [
+                {
+                    "id": "textHeadline",
+                    "name": "Heading",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "linkbutton",
+            "name": "Custom Button Configurations",
+            "description": "This component will display button and its URL or Link",
+            "attribute_definitions": [
+                  {
+                      "id": "buttonText",
+                      "name": "Button for Text Editor",
+                      "description": "This is the button for text content area",
+                      "type": "string",
+                      "required": false
+                  },
+                  {
+                      "id": "tileLink",
+                      "name": "Link on Anchor Button",
+                      "description": "Provide the Link URL of Anchor Button.",
+                      "type": "url",
+                      "required": false
+                  },
+                  {
+                      "id": "tileNewtab",
+                      "name": "New Tab",
+                      "description": "Open Link in New Tab",
+                      "type": "boolean",
+                      "required": false
+                  }
+              ]
+          }
+    ],
+  "region_definitions": []
+}

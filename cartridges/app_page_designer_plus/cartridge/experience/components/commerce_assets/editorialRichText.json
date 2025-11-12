@@ -1,0 +1,36 @@
+{
+  "name": "Textbox",
+  "description": "This is the Textbox Component, can be used as Help or FAQ pages",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+        "id": "textEditClassWrapper",
+        "name": "Section Class for Editor wrapper",
+        "description": "Section Class for CSS Styling",
+        "attribute_definitions": [
+            {
+                "id": "textEditClass",
+                "name": "Specify the Section Class Name",
+                "description": "Provide the Section Class Name.",
+                "type": "string",
+                "required": false
+            }
+        ]
+    },
+    {
+      "id": "textContent",
+      "name": "Text Content",
+      "description": "The content to show in this component",
+      "attribute_definitions": [
+        {
+          "id": "richText",
+          "name": "content",
+          "description": "This is the rich text content area",
+          "type": "markup",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

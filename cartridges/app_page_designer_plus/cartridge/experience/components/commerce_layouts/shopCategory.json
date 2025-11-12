@@ -1,0 +1,13 @@
+{
+    "name": "Shop Category Layout",
+    "description": "3 Row x  2 Col (Mobile), 1 Row x 5 Col (Desktop)",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [],
+    "region_definitions": [
+        {
+            "id":"categoryItem",
+            "name":"Category Item",
+            "component_type_exclusions": []
+        }
+    ]
+}

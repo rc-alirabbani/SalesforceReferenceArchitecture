@@ -1,0 +1,70 @@
+{
+  "name": "Main Banner",
+  "description": "Image, text overlay that links user to a category using the markup editor",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "bannerClassWrapper",
+      "name": "Banner Class for Wrapper",
+      "description": "Banner Class for CSS Styling",
+      "attribute_definitions": [
+          {
+              "id": "bannerClass",
+              "name": "Specify the Banner Class Name",
+              "description": "Provide the Banner Class Name.",
+              "type": "string",
+              "required": false
+          }
+      ]
+    },
+    {
+      "id": "bannerImage",
+      "name": "Banner Images",
+      "description": "The visual display of the banner image in the background.",
+      "attribute_definitions": [
+          {
+              "id": "image",
+              "name": "Banner Desktop Image",
+              "description": "The visual display of the desktop banner image in the background.",
+              "type": "image",
+              "required": false
+          },
+          {
+              "id": "imageMob",
+              "name": "Banner Mobile Image",
+              "description": "The visual display of the mobile banner image in the background.",
+              "type": "image",
+              "required": false
+          }
+      ]
+    },
+    
+    {
+      "id": "textOverlay",
+      "name": "Text Overlay",
+      "description": "The overlay text on top of the banner image.",
+      "attribute_definitions": [
+        {
+          "id": "heading",
+          "name": "Heading",
+          "type": "markup",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "shopNowLink",
+      "name": "Shop Now Link",
+      "description": "The Shop Now link on the banner image",
+      "attribute_definitions": [
+        {
+          "id": "categoryLink",
+          "name": "Category Link",
+          "type": "category",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

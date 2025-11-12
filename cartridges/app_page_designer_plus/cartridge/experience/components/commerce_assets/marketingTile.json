@@ -1,0 +1,41 @@
+{
+    "name": "Marketing Tile",
+    "description": "Marketing Tile ",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "marketingTile",
+            "name": "Marketing Tile Details",
+            "description": "Specify the Marketing Tile to be Displayed.",
+            "attribute_definitions": [
+                {
+                    "id": "tileLink",
+                    "name": "Link for Tile",
+                    "description": "Select Link to be displayed.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "displayName",
+                    "name": "Custom Display Name",
+                    "description": "Display Name of the tile.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                   "id": "image",
+                   "name": "Image",
+                   "type": "image",
+                   "required": false
+                },
+                {
+                    "id": "customClass",
+                    "name": "Class Name:",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

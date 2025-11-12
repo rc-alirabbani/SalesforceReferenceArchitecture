@@ -1,0 +1,31 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/newsTile.css');
+    <style>
+        .blog-tile-inner h5 {
+            font-size: 20px;
+            color: #050044;
+        }
+        .blog-date {
+            font-size: 16px;
+            color: #3E3E3E;
+        }
+
+    </style>
+</isscript>
+<div class="blog-tile-container">
+    <div class="blog-tile-inner">
+        <div class="blog-image">
+            <isif condition= "${pdict.blogTileImage}" >
+                <img
+                    class="blog-page-image image-fluid"
+                    src="${pdict.blogTileImage.src.desktop}"
+                    alt="${pdict.blogTileImageAlt}" title="${pdict.blogTileImageAlt}"
+                />
+            </isif>
+            <h5>${pdict.blogTileHeading}</h5>
+        </div>
+        <div class="blog-date">${pdict.blogTileDate}</div>
+    </div>
+</div>
+
