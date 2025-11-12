@@ -1,0 +1,16 @@
+<isscript>
+  var assets = require('*/cartridge/scripts/assets.js');
+  assets.addCss('/css/experience/components/pd_layouts/pdPlusGrid.css');
+  assets.addCss('/css/experience/components/pd_assets/htmlMarkup.css');
+</isscript>
+
+
+
+  <div class="" encoding="off" />
+
+    <iscomment> HTML Markup Placed here </iscomment>
+    <isif condition="${pdict.placeHTML !== ''}">
+      <isprint value="${pdict.placeHTML}" encoding="off" />
+    </isif>
+
+  </div>

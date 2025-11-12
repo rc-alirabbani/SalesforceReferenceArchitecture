@@ -27,7 +27,7 @@
         <div class="image-banner-detail">
             <isprint value="${pdict.imgBannerDetail}" encoding="off" />
         </div>
-      
+
          <button class="btn btn-primary category-link banner-btn ${pdict.btnwidthsize} ${pdict.borderRadiusBtn}"
          <isif condition="${pdict.btnBgStyles}"><isprint value="${pdict.btnBgStyles}" encoding="off" /></isif>>
             <a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>> ${pdict.buttontext} </a>

@@ -1,0 +1,50 @@
+{
+    "name": "Blog Detail Component",
+    "description": "Blog Component with Heading, Date Image, and Detail Text",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "blogDetailCompnent",
+            "name": "Blog Detail Component",
+            "description": "Blog Detail to be Displayed.",
+            "attribute_definitions": [
+                {
+                    "id": "blogHeading",
+                    "name": "Blog Component Heading",
+                    "description": "Blog Heading to be displayed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "blogDate",
+                    "name": "Blog Date",
+                    "description": "Blog date to be displayed. e.g. 04, 30, 2024",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "blogImage",
+                    "name": "Blog Component Image",
+                    "description": "Blog Image to be displayed.",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "blogImageAlt",
+                    "name": "Blog Image Alt",
+                    "description": "Blog Image Alt to be displayed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "blogDetail",
+                    "name": "Blog Detail text area",
+                    "description": "This is the Blog Detail rich text content area",
+                    "type": "markup",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

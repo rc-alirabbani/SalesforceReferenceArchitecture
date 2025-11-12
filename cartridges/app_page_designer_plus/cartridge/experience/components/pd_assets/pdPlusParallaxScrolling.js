@@ -19,55 +19,117 @@ module.exports.render = function (context) {
     var content = context.content;
     var model = new HashMap();
 
-    model.ParallaxScrTextSection = content.ParallaxScrTextSection ? content.ParallaxScrTextSection : '';
-    model.ParallaxScrbtn = content.ParallaxScrbtn? content.ParallaxScrbtn : '';
-    model.ParallaxScrimg= content.ParallaxScrimg ? content.ParallaxScrimg.file.url : null;
+    model.isContainer = content.isContainer ? 'container-fluid' : 'container';
 
-    if (content.tileLink) {
-        model.tileLink = content.tileLink;
-    } else {
-        model.tileLink = 'javascript:void(0)';
+    model.ParallaxScrTextSection = content.ParallaxScrTextSection ? content.ParallaxScrTextSection : '';
+    model. ParallaxScrBannerHeading = content.ParallaxScrBannerHeading ? content.ParallaxScrBannerHeading : '';
+    model.ParallaxScrbtn = content.ParallaxScrbtn? content.ParallaxScrbtn : null;
+    model.ParallaxScrimg= content.ParallaxScrimg ? content.ParallaxScrimg.file.url : null;
+    model.bgOverlay = content.bgOverlay ? content.bgOverlay : '';
+    model.customCss = content.customCss ? content.customCss : '';
+
+    model.animationType = content.animationType ? content.animationType : '';
+    model.animationDuration = content.animationDuration ? content.animationDuration : '';
+
+
+    /* HeadingType  */
+
+    if (content.parallaxSectionheading === 'large heading') {
+        model.parallaxSectionheading = 'bannerHeading';
+    } else if (content.parallaxSectionheading === 'Small Heading') {
+        model.parallaxSectionheading = 'NormalHeading';
     }
 
-    model.tileNewtab = content.tileNewtab;
-    model.buttontext = content.buttontext;
-
-    /* parallax SectionHeight  */
-        model.sectionHeight = content.sectionHeight ? content.sectionHeight : '';
-
-     /* parallax Section Type  */
+   
+    /* parallax Section Type  */
 
     if (content.parallaxSection === 'Parallax') {
         model.parallaxSection = 'section-background';
     } else if (content.parallaxSection === 'Normal') {
         model.parallaxSection = 'sectionFixed';
     }
+    
+
+    model.bgComponentColor = 'style="';
+    if (content.backgroundColor) {
+        model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
+    }
+    if (content.backgroundColorAlpha) {
+        model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%' + ';';
+    }
+    model.bgComponentColor += '"';
+
+    /* shadow on text  */
+    if (content.textShadow === 'Text White Shadow') {
+        model.textShadow = 'txt-white-shadow';
+    } else if (content.textShadow === 'Text Black Shadow') {
+        model.textShadow = 'txt-black-shadow';
+    }
+
+    // New tab
+
+    if (content.tileLink) {
+        model.tileLink = content.tileLink;
+    } else {
+        model.tileLink = '#';
+    }
+
+    model.tileNewtab = content.tileNewtab;
+
+    /* parallax SectionHeight  */
+    model.sectionHeight = content.sectionHeight ? content.sectionHeight : '';
+    model.sectionWidth = content.sectionWidth ? content.sectionWidth : '';
+
+    /* parallax Heading Alignment  */
+    if (content.hdAlignment === 'left') {
+        model.hdAlignment = 'text-start';
+    } else if (content.hdAlignment === 'right') {
+        model.hdAlignment = 'text-end';
+    } else if (content.hdAlignment === 'center') {
+        model.hdAlignment = 'text-center';
+    }
 
     /* parallax text Alignment  */
     if (content.textAlignment === 'left') {
-        model.textAlignment = 'justify-content-start';
+        model.textAlignment = 'text-start';
     } else if (content.textAlignment === 'right') {
-        model.textAlignment = 'justify-content-end';
+        model.textAlignment = 'text-end';
     } else if (content.textAlignment === 'center') {
-        model.textAlignment = 'justify-content-center';
+        model.textAlignment = 'text-center';
+    }
+
+    /* parallax Column Alignment  */
+    if (content.setColumnPosition === 'left') {
+        model.setColumnPosition = 'justify-content-start';
+    } else if (content.setColumnPosition === 'right') {
+        model.setColumnPosition = 'justify-content-end';
+    } else if (content.setColumnPosition === 'center') {
+        model.setColumnPosition = 'justify-content-center';
+    }
+
+    /* List Item columns col1 col2 */
+    if (content.listItemTwoCol === 'list 1 Column') {
+        model.listItemTwoCol = 'list-1Cal';
+    } else if (content.listItemTwoCol === 'list 2 Column') {
+        model.listItemTwoCol = 'list-2Cal';
     }
 
     /* parallax Button  Color  */
 
-    model.bgComponentColor = 'style="';
+    model.btnComponentColor = 'style="';
 
     if (content.btnbgColor) {
-        model.bgComponentColor += 'background-color: ' + content.btnbgColor.value + '; ';
+        model.btnComponentColor += 'background-color: ' + content.btnbgColor.value + '; ';
     }
     
     if (content.btntextColor) {
-        model.bgComponentColor += 'color: ' + content.btntextColor.value + '; ';
+        model.btnComponentColor += 'color: ' + content.btntextColor.value + '; ';
     }
 
     if (content.btnBorderColor) {
-        model.bgComponentColor += 'border-color: ' + content.btnBorderColor.value + '; ';
+        model.btnComponentColor += 'border-color: ' + content.btnBorderColor.value + '; ';
     }
-    model.bgComponentColor += '"';
+    model.btnComponentColor += '"';
 
     /* parallax Section Text Color  */
     model.textContentColor = 'style="';
@@ -78,11 +140,17 @@ module.exports.render = function (context) {
 
     model.textContentColor += '"';
 
- /* Margin | Padding Settings */
-    
+    /* parallax text Alignment  */
+    if (content.overlaydispaly === 'Daplay') {
+        model.overlaydispaly = 'd-block';
+    } else if (content.overlaydispaly === 'Overlay hide') {
+        model.overlaydispaly = 'd-none';
+    }
+
+    /* Margin | Padding Settings */
+
     model.UILayout = 'style="';
-    model.UILayout += 'color: ' + content.textColor.value;
-    model.UILayout += '; padding-top: ' + (content.setPaddingTop ? content.setPaddingTop : '0');
+    model.UILayout += 'padding-top: ' + (content.setPaddingTop ? content.setPaddingTop : '0');
     model.UILayout += '; padding-right: ' + (content.setPaddingRight ? content.setPaddingRight : '0');
     model.UILayout += '; padding-bottom: ' + (content.setPaddingBottom ? content.setPaddingBottom : '0');
     model.UILayout += '; padding-left: ' + (content.setPaddingLeft ? content.setPaddingLeft : '0');

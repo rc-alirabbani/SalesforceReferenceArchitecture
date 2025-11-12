@@ -1,0 +1,47 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/VerticalContentTile.css');
+</isscript>
+
+<div class="content-tile-container">
+    <div class="content-tile-heading">
+        <h3><isprint value="${pdict.headingText}" encoding="off" /></h3>
+    </div>
+
+    <!-- Check if image exists before rendering -->
+    <isif condition="${pdict.imgFile && pdict.imgFile.src}">
+        <figure class="content-tile-fig">
+            <picture>
+                <isif condition="${pdict.imgFile.src.tablet}">
+                    <source srcset="${pdict.imgFile.src.tablet}" media="(min-width: 768px)"/>
+                </isif>
+                <isif condition="${pdict.imgFile.src.desktop}">
+                    <source srcset="${pdict.imgFile.src.desktop}" media="(min-width: 1024px)"/>
+                </isif>
+                <isif condition="${pdict.imgFile.src.mobile}">
+                    <img
+                        class="photo-tile-image image-fluid"
+                        src="${pdict.imgFile.src.mobile}"
+                        style="--focal-point-x:${pdict.imgFile.focalPointX}; --focal-point-y:${pdict.imgFile.focalPointY}"
+                        <isif condition="${pdict.imgFile.alt}"> 
+                            alt="${pdict.imgFile.alt}" title="${pdict.imgFile.alt}"
+                        </isif>
+                    />
+                </isif>
+            </picture>
+        </figure>
+    </isif>
+    
+
+    <div class="content-tile-desc">
+        <isprint value="${pdict.richText}" encoding="off" />
+    </div>
+
+    <div class="content-tile-btn">
+        <button class="btn btn-default">
+            <a href="${pdict.titleLink}">
+                <isif condition="${pdict.buttonText}"><isprint value="${pdict.buttonText}" encoding="off" /></isif>
+            </a>
+        </button>
+    </div>
+</div>

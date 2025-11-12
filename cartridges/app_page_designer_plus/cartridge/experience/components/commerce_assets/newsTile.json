@@ -1,0 +1,43 @@
+{
+    "name": "News Tile Component",
+    "description": "News Component with Heading and Date",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "newsTileCompnent",
+            "name": "News Tile Component",
+            "description": "News Tile to be Displayed.",
+            "attribute_definitions": [
+                {
+                    "id": "newsRelease",
+                    "name": "News Tag Text",
+                    "description": "News Tag e.g. (News,Press Release,Reports,Case Studies).",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "newsHeading",
+                    "name": "News Tile Component Heading",
+                    "description": "News Tile Heading to be displayed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "newsTileDate",
+                    "name": "News Tile Date",
+                    "description": "News Tile date to be displayed. e.g. Apr 30, 2024",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "newsTileLink",
+                    "name": "News Tile Link",
+                    "description": "News Tile Link to be displayed.",
+                    "type": "url",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

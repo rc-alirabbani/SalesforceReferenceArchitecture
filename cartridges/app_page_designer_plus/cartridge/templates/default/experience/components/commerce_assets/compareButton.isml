@@ -1,0 +1,11 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+
+<isif condition="${pdict.buttonText !== null}">
+    <div class="btn-wrapper">
+        <div class="btn">
+            <a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>${pdict.buttonText}</a>
+        </div>
+    </div>
+</isif>

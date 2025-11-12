@@ -29,9 +29,16 @@ module.exports = [
         entry: jsFiles,
         output: {
             path: path.resolve(
-                './cartridges/app_storefront_base/cartridge/static'
+                './cartridges/app_page_designer_plus/cartridge/static'
             ),
             filename: '[name].js'
+        },
+        resolve: {
+            alias: {
+                base: path.resolve(__dirname, 'cartridges/app_storefront_base/cartridge/client/default/js'),
+                app_storefront_base: path.resolve(__dirname, 'cartridges/app_storefront_base/cartridge/client/default/js')
+            },
+            extensions: ['.js', '.json']
         },
         module: {
             rules: [
@@ -57,62 +64,62 @@ module.exports = [
         name: 'scss',
         entry: scssFiles,
         output: {
-            path: path.resolve(
-                './cartridges/app_storefront_base/cartridge/static'
-            )
+            path: path.resolve('./cartridges/app_page_designer_plus/cartridge/static')
+        },
+        resolve: {
+            alias: {
+            base: path.resolve(__dirname, 'cartridges/app_storefront_base/cartridge/client/default/scss')
+            },
+            extensions: ['.scss', '.css']
         },
         module: {
             rules: [
+            {
+                test: /\.scss$/,
+                use: [
                 {
-                    test: /\.scss$/,
-                    use: [
-                        {
-                            loader: MiniCssExtractPlugin.loader,
-                            options: {
-                                esModule: false
-                            }
-                        },
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                url: false
-                            }
-                        },
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                postcssOptions: {
-                                    plugins: [require('autoprefixer')()]
-                                }
-                            }
-                        },
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                implementation: require('sass'),
-                                sassOptions: {
-                                    includePaths: [
-                                        path.resolve('node_modules'),
-                                        path.resolve(
-                                            'node_modules/flag-icon-css/sass'
-                                        )
-                                    ]
-                                }
-                            }
-                        }
-                    ]
+                    loader: MiniCssExtractPlugin.loader,
+                    options: { esModule: false }
+                },
+                {
+                    loader: 'css-loader',
+                    options: { url: false }
+                },
+                {
+                    loader: 'postcss-loader',
+                    options: {
+                    postcssOptions: {
+                        plugins: [require('autoprefixer')()]
+                    }
+                    }
+                },
+                {
+                    loader: 'sass-loader',
+                    options: {
+                    implementation: require('sass'),
+                    sassOptions: {
+                        includePaths: [
+                        path.resolve('node_modules'),
+                        path.resolve('node_modules/flag-icon-css/sass'),
+                        path.resolve(__dirname, 'cartridges/app_storefront_base/cartridge/client/default/scss')
+                        ]
+                    }
+                    }
                 }
+                ]
+            }
             ]
         },
         plugins: [
             new RemoveEmptyScriptsPlugin(),
             new MiniCssExtractPlugin({
-                filename: '[name].css',
-                chunkFilename: '[name].css'
+            filename: '[name].css',
+            chunkFilename: '[name].css'
             })
         ],
         optimization: {
             minimizer: ['...', new CssMinimizerPlugin()]
         }
-    }
+        }
+
 ];

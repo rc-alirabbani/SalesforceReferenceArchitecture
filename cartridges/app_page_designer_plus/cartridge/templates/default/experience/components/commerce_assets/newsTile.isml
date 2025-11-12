@@ -1,0 +1,14 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/newsTile.css');
+</isscript>
+<div class="news-tile-container">
+    <div class="news-tile-inner">
+        <a href="${pdict.newsTileLink}">
+            <div class="news-release">${pdict.newsRelease}</div>
+            <h4>${pdict.newsHeading}</h4>
+            <div class="news-date">${pdict.newsTileDate}</div>
+        </a>
+    </div>
+</div>
+

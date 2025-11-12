@@ -1,0 +1,58 @@
+{
+    "name": "Static Content Tile",
+    "description": "Create Tile for Content",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+          {
+            "id": "staticImageComponent",
+            "name": "Custom Package Tile Configurations",
+            "description": "This component will display Heading image text and button.",
+            "attribute_definitions": [
+                {
+                    "id": "headingText",
+                    "name": "Top Heading text",
+                    "description": "This is the heading text",
+                    "type": "string",
+                    "required": false
+                },
+                  {
+                      "id": "imgFile",
+                      "name": "Tile Image",
+                      "description": "Select a Tile Image to be displayed",
+                      "type": "image",
+                      "required": false
+                  },
+                  {
+                      "id": "imgAlt",
+                      "name": "Alternate Text of Image",
+                      "description": "The image alt text shown by the component.",
+                      "type": "string",
+                      "required": false
+                  },
+                  {
+                      "id": "richText",
+                      "name": "Rich text content area",
+                      "description": "This is the rich text content area",
+                      "type": "markup",
+                      "required": false
+                  },
+                  {
+                      "id": "buttonText",
+                      "name": "Button for Text Editor",
+                      "description": "This is the button for text content area",
+                      "type": "string",
+                      "required": false
+                  },
+                  {
+                      "id": "tileLink",
+                      "name": "Link on Anchor Button",
+                      "description": "Provide the Link URL of Anchor Button.",
+                      "type": "url",
+                      "required": false
+                  }
+              ]
+          }
+      ],
+    "region_definitions": []
+  }
+  

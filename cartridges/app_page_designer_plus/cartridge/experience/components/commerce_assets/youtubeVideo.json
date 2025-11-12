@@ -1,0 +1,43 @@
+{
+    "name": "Youtube Video",
+    "description": "Youtube playing videos",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "youTubeVideoComponentAttributes",
+            "name": "Youtube Video Player Configurations",
+            "description": "This component will host Youtube video.",
+            "attribute_definitions": [
+                {
+                    "id": "className",
+                    "name": "CSS Class name",
+                    "description": "Provide the class name of Video Component.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "videoID",
+                    "name": "youtube Video ID",
+                    "description": "Specify Youtube Video ID",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "videoPoster",
+                    "name": "Video Thumbnail",
+                    "description": "Video Thumbnail",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "imgAlt",
+                    "name": "Image Alternate Text",
+                    "description": "Image Alternate Text",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

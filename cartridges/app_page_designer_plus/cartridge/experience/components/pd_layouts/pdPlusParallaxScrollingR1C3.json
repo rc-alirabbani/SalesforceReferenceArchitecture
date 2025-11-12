@@ -1,0 +1,468 @@
+{
+    "name": "PD Plus parallax Scrolling 1 Row x 3 Col",
+    "description": "This is a layout component of 2 row by 1 column for mobile and 1 row by 2 columns for desktop/tablet.",
+    "group": "pd_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "animationSetting",
+            "name": "Asset Animation Setting",
+            "description": "Set Animation Setting (type, speed, duration)",
+            "attribute_definitions": [
+                {
+                    "id": "animationType",
+                    "name": "Animation Type e.g (fade-in, fade-up, fade-down)",
+                    "description": "Please select type of animation",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "animationDuration",
+                    "name": "Animation Duration e.g (1000 is equal 1s)",
+                    "description": "Please select duration of animation",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "componentSettings",
+            "name": "Component Settings",
+            "description": "The visual display of the container.",
+            "attribute_definitions": [
+                {
+                    "id": "customCss",
+                    "name": "Add class name for custom styles",
+                    "description": "Please add class name for custom styles",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "isContainer",
+                    "name": "Layout Fluid",
+                    "description": "Set layout fluid or at center",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "parallaxSection",
+                    "name": "Please select the background type ",
+                    "description": "Background type e.g (Parallax/Fixed)",
+                    "type": "enum",
+                    "values": [
+                        "Parallax",
+                        "Normal"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "sectionHeight",
+                    "name": "parallax Section Height i.e. 20px / 1.25rem",
+                    "description": "Provide height value applied Parallax section Height",
+                    "type": "string",
+                    "required": false
+                },
+                
+                {
+                    "id": "bgOverlay",
+                    "name": "Background Image Overlay Color in (RGBA)",
+                    "description": "Provide overlay color of background i.e rgba(0, 0, 0, .7)",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "backgroundColor",
+                    "name": "Specify Background Color",
+                    "description": "Set Background Color",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "backgroundColorAlpha",
+                    "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
+                    "description": "Set Background Color alpha between 0 and 1",
+                    "type": "enum",
+                    "default_value": 100,
+                    "values": [
+                        10,
+                        20,
+                        30,
+                        40,
+                        50,
+                        60,
+                        70,
+                        80,
+                        90,
+                        100
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "bgGradiant",
+                    "name": "Background Gradiant Color ",
+                    "description": "Provide gradiant color of background",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "textShadow",
+                    "name": "Please select the text shadow type",
+                    "description": "Shadow type e.g (Parallax/Fixed)",
+                    "type": "enum",
+                    "values": [
+                        "Text White Shadow",
+                        "Text Black Shadow"
+                    ],
+                    "required": false
+                },
+                {
+                  "id": "ParallaxScrimg",
+                  "name": " Parallax Scrolling Section background Image",
+                  "type": "image",
+                  "required": false
+                },
+                {
+                    "id": "ParallaxScrHdSectionR1C1",
+                    "name": "Parallax column 1  Heading",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id": "ParallaxScrTextSection",
+                    "name": "Column1  Parallax Scrolling Text Section",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id": "TextSectionPaddingR1C1",
+                    "name": "Column1 Padding on text  i.e (0 0 0 30%) in (px/%)",
+                    "description": "Provide padding top/right/bottom/righ",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "textAlignment",
+                    "name": "Column1 Please select text alignment",
+                    "description": "select text alignment e.g (Left/Right/Center)",
+                    "type": "enum",
+                    "values": [
+                        "left",
+                        "right",
+                        "center"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "textColor",
+                    "name": "Column1 Specify Content Text Color",
+                    "description": "Set Content Text Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "ParallaxScrbtn",
+                    "name": "Column1 Text on Anchor Button",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                      "id": "tileLink",
+                      "name": "Column1 Link the Anchor Button",
+                      "description": "Provide the Link URL of Anchor Button",
+                      "type": "url",
+                      "required": false
+                  },
+                  {
+                      "id": "tileNewtab",
+                      "name": "New Tab",
+                      "description": "Open Link in New Tab",
+                      "type": "boolean",
+                      "required": false
+                  },
+                  {
+                    "id": "btnbgColor",
+                    "name": "Column1 Specify Button background Color",
+                    "description": "Set Button background Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btntextColor",
+                    "name": "Column1 Specify Button Color",
+                    "description": "Set Button  Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btnBorderColor",
+                    "name": "Column1 Specify Button Border Color",
+                    "description": "Set Button  Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "ParallaxScrHdSectionR1C2",
+                    "name": "Parallax Column 2 Heading",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id": "ParallaxScrTextSectionR1C2",
+                    "name": "Column2 Parallax Scrolling Text Section",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id": "TextSectionPaddingR1C2",
+                    "name": "Column2 Padding on text  i.e (0 0 0 30%) in (px/%)",
+                    "description": "Provide padding top/right/bottom/righ",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "textColorR1C2",
+                    "name": "Column2 Specify Content Text Color",
+                    "description": "Set Content Text Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "textAlignmentR1C2",
+                    "name": "Column2 Please select text alignment",
+                    "description": "select text alignment e.g (Left/Right/Center)",
+                    "type": "enum",
+                    "values": [
+                        "left",
+                        "right",
+                        "center"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "ParallaxScrbtnR1C2",
+                    "name": "Column2 Text on Anchor Button",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "tileLinkR1C2",
+                    "name": "Column2 Link the Anchor Button",
+                    "description": "Provide the Link URL of Anchor Button",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtabR1C2",
+                    "name": "Column2 New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "btnbgColorR1C2",
+                    "name": "Column2 Specify Button background Color",
+                    "description": "Set Button background Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btntextColorR1C2",
+                    "name": "Column2 Specify Button Color",
+                    "description": "Set Button  Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btnBorderColorR1C2",
+                    "name": "Column2 Specify Button Border Color",
+                    "description": "Set Button  Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "ParallaxScrHdSectionR1C3",
+                    "name": "Parallax Column 3 Heading",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id": "ParallaxScrTextSectionR1C3C3",
+                    "name": "Column3 Parallax Scrolling Text Section",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id": "TextSectionPaddingR1C3",
+                    "name": "Column3 Padding on text  i.e (0 0 0 30%) in (px/%)",
+                    "description": "Provide padding top/right/bottom/righ",
+                    "type": "string",
+                    "required": false
+                },
+
+                {
+                    "id": "textAlignmentR1C3C3",
+                    "name": "Column3 Please select text alignment",
+                    "description": "select text alignment e.g (Left/Right/Center)",
+                    "type": "enum",
+                    "values": [
+                        "left",
+                        "right",
+                        "center"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "textColorR1C3C3",
+                    "name": "Column3 Specify Content Text Color",
+                    "description": "Set Content Text Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "ParallaxScrbtnR1C3C3",
+                    "name": "Column3 Text on Anchor Button",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                      "id": "tileLinkR1C3C3",
+                      "name": "Column3 Link the Anchor Button",
+                      "description": "Provide the Link URL of Anchor Button",
+                      "type": "url",
+                      "required": false
+                  },
+                  {
+                      "id": "tileNewtabR1C3C3",
+                      "name": "Column3 New Tab",
+                      "description": "Open Link in New Tab",
+                      "type": "boolean",
+                      "required": false
+                  },
+                  {
+                    "id": "btnbgColorR1C3C3",
+                    "name": "Column3 Specify Button background Color",
+                    "description": "Set Button background Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btntextColorR1C3C3",
+                    "name": "Column3 Specify Button Color",
+                    "description": "Set Button  Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btnBorderColorR1C3C3",
+                    "name": "Column3 Specify Button Border Color",
+                    "description": "Set Button  Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "id": "layoutSettings",
+            "name": "UI Layout Settings",
+            "description": "The visual display of the container.",
+            "attribute_definitions": [
+                {
+                    "id": "setPaddingTop",
+                    "name": "Padding Top i.e. 20px / 1.25rem",
+                    "description": "Provide padding-top value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingRight",
+                    "name": "Padding Right i.e. 5px / 0.3125rem",
+                    "description": "Provide padding-right value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingBottom",
+                    "name": "Padding Bottom i.e. 15px / 0.9375rem",
+                    "description": "Provide padding-bottom value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingLeft",
+                    "name": "Padding Left i.e. 10px / 0.625rem",
+                    "description": "Provide padding-left value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginTop",
+                    "name": "Margin Top i.e. 20px / 1.25rem",
+                    "description": "Provide margin-top value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginRight",
+                    "name": "Margin Right i.e. 15px / 0.9375rem",
+                    "description": "Provide margin-right value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginBottom",
+                    "name": "Margin Bottom i.e. 30px / 1.875rem",
+                    "description": "Provide margin-bottom value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginLeft",
+                    "name": "Margin Left i.e. -15px / -0.9375rem",
+                    "description": "Provide margin-left value applied outside the container",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-12">
+        <a href="${pdict.category.url}" class="">
+            <img
+                class=""
+                src="${pdict.category.iconUrl}"
+                alt=""
+            />
+            <div class="">
+                <h5 class="">${pdict.category.name}</h5>
+            </div>
+        </a>
+    </div>
+</div>
+

@@ -1,0 +1,28 @@
+{
+    "name": "3 Row x  2 Col Flexi (Mobile), 1 Row x 5 Col Flexi (Desktop)",
+    "description": "3 Row x  2 Col (Mobile), 1 Row x 5 Col (Desktop)",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "sectionClassWrapper7",
+            "name": "Section Class for Wrapper",
+            "description": "Section Class for CSS Styling",
+            "attribute_definitions": [
+                {
+                    "id": "sectionClassCol7",
+                    "name": "Specify the Section Class Name",
+                    "description": "Provide the Section Class Name.",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id":"colItemsLayout",
+            "name":"Column Items",
+            "component_type_exclusions": []
+        }
+    ]
+}

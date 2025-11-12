@@ -29,11 +29,11 @@
                             </div>
                         </div>
 
-                       <div class="img-overlay ${pdict.overlaydirection}" 
+                       <div class="img-overlay ${pdict.overlaydirection}"
                             <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>
                         </div>
                     </a>
-                </picture> 
+                </picture>
                 <figcaption class=" ${pdict.btnwidthsize}">
                     <div class="col-12 ITC-text-underneath">
                         <span>

@@ -1,0 +1,77 @@
+@import "bootstrap/scss/mixins/breakpoints";
+@import "https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap";
+
+// Rockwest Variables
+$primary-d1: #AF2025;
+$primary-m1: #336DFF;
+$primary-brand: #EE2312;
+$primary-l1: #3D84FF;
+$secondary-color: #1B252C;
+$blue-01: #0071b3;
+$black-pearl: #172026;
+$dim-gray: #707070;
+$gray-d1: #535965;
+$gray-d2: #181c24;
+$gray98: #FAFAFA;
+$grayl1: #E5E5E7;
+$gray-02: #909090;
+$gray-03: #f7f7f7;
+$gray-04: #b5b7bc;
+$gray-05: #B5B8BA;
+$gray-06: #f5f5f5;
+$gray-07: #e8e8e8;
+$gray-08: #c6c6c6;
+$white: #FFF;
+$light-pink: #F9B9BCBF;
+$light-pink1: #FACACD;
+$gray40: #666;
+$gray93: #EDEDED;
+$gray60: #999;
+$gray85: #91959C;
+$blue: #1F39FA;
+$blue-02: #336DFB;
+$bright-grey: #545D63;
+$light-grey: #D1D3D6;
+$dark-charcoal: #333;
+$black: #000;
+$gray92: #EAEBEB;
+
+/* responsive breakpoints */
+$grid-breakpoints: (
+    xs: 0,
+    sm: 544px,
+    md: 769px,
+    lg: 992px,
+    xl: 1170px,
+) !default;
+$container-max-widths: (
+    md: 720px,
+    lg: 940px,
+    xl: 1380px
+) !default;
+
+// Fonts variables
+$font-sans-serif: "open-sans", sans-serif;
+$font-muli: "muli", sans-serif;
+$font-source-serif-pro: "source-serif-pro", serif;
+$font-oswald: "Oswald", sans-serif;
+
+.container {
+    padding: 0;
+    margin: 0 auto;
+    @include media-breakpoint-down(md){
+        padding: 0 16px !important;
+    }
+}
+
+.comp-content-txt-1,
+.comp-content-txt-2,
+.comp-content-txt-3,
+.comp-content-txt-4,
+.comp-content-txt-5,
+.col-animate-up,
+.col-animate-down,
+.animate-img {
+    transition-duration: .8s;
+    transition-timing-function: cubic-bezier(.165,.84,.44,1);
+}

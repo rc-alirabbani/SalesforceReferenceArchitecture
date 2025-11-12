@@ -1,0 +1,46 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/imageAndTextCommon.css');
+</isscript>
+
+<div class="ITC-container">
+    <div class="row ITC-row">
+        <div class="col-12">
+            <figure class="ITC-figure">
+                <a href="${pdict.imageURL}">
+                    <img
+                        src="${pdict.image}"
+                        alt="${pdict.headerText}"
+                    />
+                </a>
+                <div>
+                     <isprint value="${pdict.headerText ? pdict.headerText : ''}" encoding="off"/>
+                </div>
+                <div>
+                     <isprint value="${pdict.modalDetails ? pdict.modalDetails : ''}" encoding="off"/>
+                </div>
+                <div>
+                     <isprint value="${pdict.bodyText ? pdict.bodyText : ''}" encoding="off"/>
+                </div>
+                <div>
+                    <a href="${pdict.ctaOneURL}">
+                        <isprint value="${pdict.ctaOneText ? pdict.ctaOneText : ''}" encoding="off"/>
+                    </a>
+                </div>
+                <div>
+                     <isprint value="${pdict.ctaTwoText ? pdict.ctaTwoText : ''}" encoding="off"/>
+                </div>
+                <div>
+                     <isprint value="${pdict.ctaThreeText ? pdict.ctaThreeText : ''}" encoding="off"/>
+                </div>
+                <div>
+                     <isprint value="${pdict.leftLabel ? pdict.leftLabel : ''}" encoding="off"/>
+                </div>
+                <div>
+                    <isprint value="${pdict.rightLabel ? pdict.rightLabel : ''}" encoding="off"/>
+                </div>
+            </figure>
+        </div>
+    </div>
+</div>
+

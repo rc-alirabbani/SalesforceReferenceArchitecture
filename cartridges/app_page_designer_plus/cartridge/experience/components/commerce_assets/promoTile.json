@@ -1,0 +1,94 @@
+{
+  "name": "Promotion Tile",
+  "description": "This is a component for Promotion Tile",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "PromoTile",
+      "attribute_definitions": [
+        {
+          "id": "promoID",
+          "name": "Promo ID",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "image",
+          "required": false
+        },
+        {
+          "id": "imageURL",
+          "name": "Image Link",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "headerText",
+          "name": "Header Text",
+          "description": "Promo Header Text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "bodyText",
+          "name": "Promo Description",
+          "type": "markup",
+          "required": false
+        },
+        {
+          "id": "ctaOneText",
+          "name": "CTA One Text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "ctaOneURL",
+          "name": "CTA One Link",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "ctaTwoText",
+          "name": "CTA Two Text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "ctaThreeText",
+          "name": "CTA Three Text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "leftLabel",
+          "name": "Left Label",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "rightLabel",
+          "name": "Right Label (See Details)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "modalDetails",
+          "name": "Modal Details",
+          "type": "markup",
+          "required": false
+        },
+        {
+          "id": "pif",
+          "name": "PIF enabled",
+          "description": "PIF Promos enabled.",
+          "type": "boolean",
+          "required": false
+          
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

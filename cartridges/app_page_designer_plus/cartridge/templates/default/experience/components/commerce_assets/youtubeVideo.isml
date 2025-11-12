@@ -1,0 +1,16 @@
+<isscript>
+var assets = require('*/cartridge/scripts/assets.js');
+assets.addJs('/js/videoComponent.js');
+assets.addCss('/css/experience/components/pd_assets/videoComponent.css');
+</isscript>
+
+<div class="mainbanner-container ${pdict.className}">
+  <div class="mainbanner-figure">
+        <div class="embed-responsive embed-responsive-${pdict.videoResolution}">
+          <iframe
+            class="embed-responsive-item full-scale" type="text/html" frameborder="0" height="300px" width="100%"
+            src="https://www.youtube.com/embed/${pdict.videoID}"></iframe>
+            <img src="${pdict.videoPoster.src.desktop}" alt="${pdict.imgAlt}" class="img-fluid" />
+        </div>
+  </div>
+</div>

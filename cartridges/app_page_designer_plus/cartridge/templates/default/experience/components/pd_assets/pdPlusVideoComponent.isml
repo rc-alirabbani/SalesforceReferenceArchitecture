@@ -45,7 +45,7 @@ assets.addCss('/css/experience/components/pd_assets/videoComponent.css');
         </div>
 
       <iselse/>
-        
+
         <div class="embed-responsive embed-responsive-${pdict.videoResolution}">
           <iframe
             <isif condition="${pdict.videoScale}"><isprint value="${pdict.videoScale}" encoding="off" /></isif>
@@ -97,13 +97,10 @@ assets.addCss('/css/experience/components/pd_assets/videoComponent.css');
             <isif condition="${pdict.videoFullScreen === "1"}">allowFullScreen</isif>
             <isif condition="${pdict.videoAutoPlay === "1"}">allow="autoplay"</isif>></iframe>
         </div>
-
-      </isif>      
-
+      </isif>
 
   <iselseif condition="${pdict.videoSelect == 'dailymotion'}">
 
-      
       <isif condition="${pdict.videoModalPopup === true}">
         <iscomment>DailyMotion when ModalPopup is true</iscomment>
 
@@ -148,14 +145,10 @@ assets.addCss('/css/experience/components/pd_assets/videoComponent.css');
             <isif condition="${pdict.videoAutoPlay === "1"}">allow="autoplay"</isif>
             ></iframe>
         </div>
-
-      </isif> 
-
+      </isif>
 
   <iselseif condition="${pdict.videoSelect == 'html5VideoPlayer'}">
-
       <isif condition="${pdict.videoModalPopup === true}">
-
         <div class="video-modal-outer">
 
           <isif condition="${pdict.videoPoster == null}">
@@ -176,30 +169,27 @@ assets.addCss('/css/experience/components/pd_assets/videoComponent.css');
               <div class="modal-content">
                 <div class="modal-body-pdplus">
                   <div class="embed-responsive embed-responsive-${pdict.videoResolution}">
-                    
-                    <video <isif condition="${pdict.videoScale}"><isprint value="${pdict.videoScale}" encoding="off" /></isif> class="html5-video-item embed-responsive-item" controls preload="true" 
+
+                    <video <isif condition="${pdict.videoScale}"><isprint value="${pdict.videoScale}" encoding="off" /></isif> class="html5-video-item embed-responsive-item" controls preload="true"
                       <isif condition="${pdict.videoLoop === "1"}">loop</isif>
-                      <isif condition="${pdict.videoMute === "1"}">muted</isif> 
+                      <isif condition="${pdict.videoMute === "1"}">muted</isif>
                       <isif condition="${pdict.videoAutoPlay === "1"}">autoplay</isif>>
                       <source src="${pdict.videoID}" type="video/mp4">
                       ${Resource.msg('html.video.not.supported', 'pdplus_common', null)}
                     </video>
-                    
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-
       <iselse/>
 
         <iscomment>HTML5Video Player</iscomment>
-        <div class="embed-responsive embed-responsive-${pdict.videoResolution}" tabindex="-1">        
+        <div class="embed-responsive embed-responsive-${pdict.videoResolution}" tabindex="-1">
           <video <isif condition="${pdict.videoScale}"><isprint value="${pdict.videoScale}" encoding="off" /></isif> class="html5-video-item embed-responsive-item" controls preload="true"
             <isif condition="${pdict.videoLoop === "1"}">loop</isif>
-            <isif condition="${pdict.videoMute === "1"}">muted</isif> 
+            <isif condition="${pdict.videoMute === "1"}">muted</isif>
             <isif condition="${pdict.videoAutoPlay === "1"}">autoplay</isif>>
             <source src="${pdict.videoID}" type="video/mp4">
             ${Resource.msg('html.video.not.supported', 'pdplus_common', null)}
@@ -207,7 +197,7 @@ assets.addCss('/css/experience/components/pd_assets/videoComponent.css');
         </div>
 
       </isif>
-  
+
   <iselseif condition="${pdict.videoSelect == 'custom-url'}">
 
       <div class="embed-responsive embed-responsive-${pdict.videoResolution}" tabindex="-1">

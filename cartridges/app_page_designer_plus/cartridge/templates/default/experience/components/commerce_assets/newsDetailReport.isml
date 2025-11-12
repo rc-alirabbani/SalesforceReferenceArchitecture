@@ -1,0 +1,38 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/newsTile.css');
+    <style>
+        .news-tile-inner h4 {
+            font-size: 40px;
+            color: #050044;
+        }
+        .news-date {
+            font-size: 16px;
+            color: #050044;
+        }
+        .news-detail p {
+            color: #3E3E3E;
+            font-size: 16px;
+        }
+
+        .news-detail h4 {
+            font-size: 20px;
+            color: #050044;
+        }
+
+    </style>
+</isscript>
+<div class="news-tile-container">
+    <div class="news-tile-inner">
+        <img
+            class="news-page-image image-fluid"
+            src="${pdict.newsImage.src.desktop}"
+            alt="${pdict.newsAlt}" title="${pdict.newsAlt}"
+        />
+        <h1>${pdict.newsHeading}</h1>
+        <div class="news-date">${pdict.newsTileDate}</div>
+        <div class="news-detail"><isprint value="${pdict.newsDetail}" encoding="off" /></div>
+    </div>
+</div>
+
+

@@ -3,47 +3,38 @@
     assets.addCss('/css/experience/components/pd_assets/imageHoverEffects.css');
 </isscript>
 
-<figure class="${pdict.isHover} ${pdict.imageHoverEffectType}">
+<a href="${pdict.linkBoxItem}" class="box-image-tile" <isif condition="${pdict.boxNewtab === true}">target="_blank"</isif>>
+    <figure style="border-radius: ${pdict.imageRadius};" class="${pdict.isHover} ${pdict.imageHoverEffectType} ${pdict.isAbsoluteLayout} <isif condition="${pdict.imgScaleHover === true}">image-hover-scale</isif>">
+        <isif condition="${pdict.imgSrc == null}">
+            <div class="img-outer">
+                <img class="img-fluid object-fit-${pdict.imgObjectFit}" src="${URLUtils.staticURL('/images/nulled-image.jpg')}"
+                alt="${Resource.msg('img.placeholder.text', 'pdplus_common', null)}" />
+            </div>
+        <iselse/>
 
-  <isif condition="${pdict.imgSrc == null}">
-
-    <div class="img-outer">
-      <img class="img-fluid object-fit-${pdict.imgObjectFit}" src="${URLUtils.staticURL('/images/nulled-image.jpg')}"
-        alt="${Resource.msg('img.placeholder.text', 'pdplus_common', null)}" />
-    </div>
-
-  <iselse/>
-
-    <div class="img-outer">
-      <img class="img-fluid object-fit-${pdict.imgObjectFit}" src="${pdict.imgSrc.src.mobile}" alt="${pdict.imgAlt}" <isif condition="${pdict.styleCSSFilters}"> <isprint value="${pdict.styleCSSFilters}" encoding="off" /></isif> />
-    </div>
-
-  </isif>
-
-  <isif condition="${pdict.imgTitle !== null || pdict.imgParagraph !== null}">
-
-    <figcaption
-      class="image-details justify-content-${pdict.posX} align-items-${pdict.posY} flex-${pdict.flexDirection} flex-${pdict.flexWrap}" 
-      <isif condition="${pdict.figCaptionStyle}"> <isprint value="${pdict.figCaptionStyle}" encoding="off" /></isif>>
-
-      <isif condition="${pdict.imgTitle || pdict.imgParagraph}">
-        <isif condition="${pdict.imgTitle}">
-          <div class="img-title">
-            <h3>${pdict.imgTitle}</h3>
-          </div>
+            <div class="img-outer" style="min-width: ${pdict.minWidthImage};">
+                <img class="img-fluid object-fit-${pdict.imgObjectFit}" src="${pdict.imgSrc.src.mobile}" alt="${pdict.imgAlt}" <isif condition="${pdict.styleCSSFilters}"> <isprint value="${pdict.styleCSSFilters}" encoding="off" /></isif> />
+            </div>
         </isif>
-        <isif condition="${pdict.imgParagraph}">
-          <div class="img-content">
-            <isprint value="${pdict.imgParagraph}" encoding="off" />
-          </div>
-        </isif>
-        <isif condition="${pdict.tilesLink !== '#'}">
-          <div class="tiles-links">
-            <a class="btn btn-primary" href="${pdict.tilesLink}">${pdict.tilesLinkText}</a>
-          </div>
-        </isif>
-      </isif>
-    </figcaption>
 
-  </isif>
-</figure>
+        <isif condition="${pdict.imgTitle !== null || pdict.imgParagraph !== null}">
+            <figcaption
+            class="image-details justify-content-${pdict.posX} align-items-${pdict.posY} flex-${pdict.flexDirection} flex-${pdict.flexWrap}"
+            <isif condition="${pdict.figCaptionStyle}"> <isprint value="${pdict.figCaptionStyle}" encoding="off" /></isif>>
+
+                <isif condition="${pdict.imgTitle || pdict.imgParagraph}">
+                    <isif condition="${pdict.imgTitle}">
+                        <div class="img-title">
+                            <h3 style="font-size:${pdict.h1Configurations.fontSize}; letter-spacing:${pdict.h1Configurations.fontSpacing}; line-height:${pdict.h1Configurations.fontHeight}; margin:${pdict.h1Configurations.marginHeading}; padding:${pdict.h1Configurations.paddingHeading}; font-family: ${pdict.h1Configurations.font}; color:${pdict.h1Configurations.fontColor}; font-weight:${pdict.h1Configurations.fontWeight}; text-shadow: ${pdict.h1Configurations.fontShadow};">${pdict.imgTitle}</h3>
+                        </div>
+                    </isif>
+                    <isif condition="${pdict.imgParagraph}">
+                        <div class="img-content" style="font-size:${pdict.para1Configurations.fontSize}; letter-spacing:${pdict.para1Configurations.paraFontSpacing}; line-height:${pdict.para1Configurations.paraFontHeight}; margin:${pdict.para1Configurations.marginHeading}; padding:${pdict.para1Configurations.paddingHeading}; font-family: ${pdict.para1Configurations.font}; color:${pdict.para1Configurations.fontColor}; font-weight:${pdict.para1Configurations.fontWeight}; text-shadow: ${pdict.para1Configurations.para1Shadow};">
+                            <isprint value="${pdict.imgParagraph}" encoding="off" />
+                        </div>
+                    </isif>
+                </isif>
+            </figcaption>
+        </isif>
+    </figure>
+</a>

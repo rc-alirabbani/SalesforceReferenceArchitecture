@@ -7,7 +7,6 @@
 /* Initialize constants */
 var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
-var ImageTransformation = require('*/cartridge/experience/utilities/ImageTransformation.js');
 
 
 /**
@@ -45,7 +44,7 @@ module.exports.render = function (context) {
     if (content.tileLink) {
         model.tileLink = content.tileLink;
     } else {
-        model.tileLink = 'javascript:void(0)';
+        model.tileLink = '#';
     }
     model.tileNewtab = content.tileNewtab;
     model.buttontext = content.buttontext;

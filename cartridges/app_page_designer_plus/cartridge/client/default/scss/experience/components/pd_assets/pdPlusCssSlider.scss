@@ -19,14 +19,14 @@
 
     &.only-pagination {
         .experience-pd_assets-pdPlusCssSlider {
-            input+label:after {
+            input+label::after {
                 opacity: 0;
                 pointer-events: none;
                 transition: all 0.5s ease;
             }
         }
 
-        .experience-pd_assets-pdPlusCssSlider:has(input:checked)+.experience-pd_assets-pdPlusCssSlider input+label:after {
+        .experience-pd_assets-pdPlusCssSlider:has(input:checked)+.experience-pd_assets-pdPlusCssSlider input+label::after {
             opacity: 0;
             pointer-events: none;
             transition: all 0.5s ease;
@@ -51,7 +51,8 @@
     }
 
     [class*="pdPlusCssSlider"] {
-          pointer-events: auto;
+        pointer-events: auto;
+
         &:first-child {
             pointer-events: auto;
 
@@ -79,7 +80,6 @@
         background-color: transparent;
         margin: 0 6px 20px;
         padding: 4px;
-        z-index: 2;
         cursor: pointer;
         transition-duration: 0.6s;
         box-shadow: 0 0 20px 0 $black;
@@ -97,7 +97,6 @@
         background-position: center 55%;
         background-size: 80px 80px;
         line-height: 100vh;
-        transition: background-size 200ms;
         position: absolute;
         color: white;
         height: calc(95vh - 12px);
@@ -166,7 +165,7 @@
             .slideContent {
                 p:last-child {
                     margin-bottom: 0;
-                } 
+                }
             }
 
             .btn {
@@ -193,7 +192,7 @@
 }
 
 
-.experience-pd_assets-pdPlusCssSlider:has(input:checked) + .experience-pd_assets-pdPlusCssSlider input + label::after {
+.experience-pd_assets-pdPlusCssSlider:has(input:checked)+.experience-pd_assets-pdPlusCssSlider input+label::after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' fill='white'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z' /%3E%3C/svg%3E");
     width: 80px;
     right: 0;
@@ -203,15 +202,19 @@
     transition: all 0.5s ease;
 }
 
-.experience-pd_assets-pdPlusCssSlider:has(input:checked) ~ .experience-pd_assets-pdPlusCssSlider input + label::after{
-    display: none;
-}
+/* stylelint-disable no-duplicate-selectors, scss/selector-no-redundant-nesting-selector */
+.experience-pd_assets-pdPlusCssSlider:has(input:checked) {
+    & ~ .experience-pd_assets-pdPlusCssSlider input+label::after {
+        display: none;
+    }
 
-.experience-pd_assets-pdPlusCssSlider:has(input:checked) + .experience-pd_assets-pdPlusCssSlider input + label::after{
-    display: block;
+    & + .experience-pd_assets-pdPlusCssSlider input+label::after {
+        display: block;
+    }
 }
+/* stylelint-enable no-duplicate-selectors, scss/selector-no-redundant-nesting-selector */
 
-[class*=pdPluscssSliderLayout] {
-    position: relative;  
+[class*="pdPluscssSliderLayout"] {
+    position: relative;
     z-index: 100;
 }

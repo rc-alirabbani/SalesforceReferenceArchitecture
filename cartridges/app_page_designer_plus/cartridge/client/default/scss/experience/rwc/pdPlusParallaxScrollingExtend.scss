@@ -1,0 +1,420 @@
+@import "../variables";
+
+.parallax-container {
+    position: relative;
+    min-height: inherit;
+
+    /* Blank line added before this comment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    width: 100%;
+    font-family: $font-oswald;
+
+    .opacity {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.parallaxScrollingSction {
+    position: relative;
+    background-attachment: inherit;
+    background-position: center;
+    background-size: cover;
+
+    .bgcolor-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+    }
+
+    .parallax-wrapper {
+        width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    button {
+        font-family: $font-oswald;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 300%;
+        line-height: 1.4;
+        text-shadow: 2px 2px 2px $black;
+        letter-spacing: -.8px;
+        font-weight: 600;
+
+        &.bannerHeading {
+            font-size: 700% !important;
+            line-height: 1.4;
+            text-shadow: 3px 3px 3px $black;
+            letter-spacing: -4.32px;
+            font-weight: 700;
+
+            p {
+                font-size: inherit !important;
+                line-height: inherit !important;
+                text-shadow: inherit !important;
+                letter-spacing: inherit !important;
+                font-family: $font-oswald;
+                font-weight: inherit !important;
+            }
+        }
+
+        strong {
+            font-size: inherit;
+        }
+    }
+
+    h2 {
+        font-size: 250%;
+        line-height: 1.4;
+        letter-spacing: -0.8px;
+        font-weight: 600;
+
+        strong { font-size: inherit; }
+    }
+
+    h3 {
+        font-size: 200%;
+        line-height: 1.4;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        font-family: $font-sans-serif;
+
+        strong {
+            font-weight: 500;
+            line-height: 26.4px;
+            font-family: $font-sans-serif;
+        }
+    }
+
+    ul {
+        margin-bottom: 19px;
+        list-style: inherit !important;
+        padding-left: 20px;
+        margin-top: 16px;
+
+        li {
+            margin-bottom: 10px;
+            padding-bottom: 0;
+            font-size: 16px;
+            text-align: left;
+            font-family: $font-sans-serif;
+
+            strong {
+                font-weight: normal;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .parallax-innercontainer {
+        z-index: 1;
+        width: 100%;
+        position: relative;
+        padding: 0 20px;
+
+        @include media-breakpoint-down(lg) {
+            padding: 0 20px;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .parallexSection {
+        max-width: 100%;
+        margin: 0 auto;
+
+        h1 {
+            p {
+                font-size: inherit;
+            }
+        }
+
+        .parrallax-content {
+            .banner-Heading {
+                font-size: 98px;
+                text-shadow: 2px 2px 2px $black;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 75px;
+                }
+            }
+        }
+
+        .bannerHeading {
+            h1 {
+                font-size: 98px;
+                text-shadow: 3px 3px 3px $black;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 50px;
+                }
+
+                p {
+                    font-size: inherit;
+                }
+            }
+        }
+    }
+
+    .btn-wrapper {
+        .btn {
+            color: #FFF;
+            font-family: $font-oswald;
+            background-image: none;
+            line-height: 1.3;
+            padding: 0.625em 1.25em;
+            letter-spacing: 1px;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
+    }
+
+    .textShadow {
+        h1 {
+            text-shadow: 3px 3px 3px $black;
+        }
+
+        h2 {
+            text-shadow: 2px 2px 2px $black;
+        }
+
+        h3 {
+            text-shadow: 2px 2px 2px $black;
+        }
+
+        h4 {
+            text-shadow: 2px 2px 2px $black;
+        }
+
+        h5 {
+            text-shadow: 2px 2px 2px $black;
+        }
+
+        h6 {
+            text-shadow: 2px 2px 2px $black;
+        }
+
+        p,
+        ul li,
+        ul li strong {
+            text-shadow: 1px 1px 1px $black;
+        }
+    }
+
+    .list-2Cal {
+        ul {
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 5%;
+            text-align: left;
+        }
+    }
+
+    .list-1Cal {
+        ul {
+            display: block;
+            text-align: left;
+        }
+    }
+
+    .setcolumnposition-sm {
+        @include media-breakpoint-down(md) {
+            .setColWith-sm {
+                flex: 100%;
+                max-width: 100% !important;
+            }
+        }
+    }
+
+    .txt-white-shadow {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-shadow: 1px 1px 1px #fff;
+            color: $black !important;
+
+            >strong {
+                text-shadow: inherit;
+                color: inherit;
+            }
+        }
+
+        h1 {
+            text-shadow: 2px 2px 2px #fff;
+
+            >strong {
+                text-shadow: inherit;
+                color: inherit !important;
+            }
+        }
+
+        p {
+            text-shadow: 1px 1px 1px #fff;
+
+            >strong {
+                text-shadow: inherit;
+                color: inherit;
+            }
+        }
+
+        ul {
+            li {
+                text-shadow: 1px 1px 1px #fff;
+                color: $black;
+
+                >strong {
+                    text-shadow: inherit;
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    .txt-black-shadow {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-shadow: 1px 1px 1px $black;
+            color: #fff;
+
+            >strong {
+                text-shadow: inherit;
+                color: inherit !important;
+            }
+        }
+
+        h1 {
+            text-shadow: 2px 2px 2px $black;
+            color: #fff;
+
+            >strong {
+                text-shadow: inherit;
+                color: inherit !important;
+            }
+        }
+
+        p {
+            color: #fff;
+            text-shadow: 1px 1px 1px $black;
+
+            >strong {
+                text-shadow: inherit;
+                color: inherit !important;
+            }
+        }
+
+        ul {
+            li {
+                color: #fff;
+                text-shadow: 1px 1px 1px $black;
+
+                >strong {
+                    text-shadow: inherit;
+                    color: inherit !important;
+                }
+            }
+        }
+    }
+
+    .text-end {
+        text-align: right;
+
+        @include media-breakpoint-down(md) {
+            text-align: left;
+        }
+    }
+
+    .text-start {
+        text-align: left;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-padding {
+        @include media-breakpoint-down(md) { padding: 0 !important; }
+    }
+}
+
+.pdplus-parallax { overflow: hidden; }
+
+.f-300 {
+    font-size: 300%;
+
+    @include media-breakpoint-down(md) { font-size: 150%; }
+}
+
+.f-200 {
+    font-size: 200%;
+
+    @include media-breakpoint-down(md) { font-size: 100%; }
+}
+
+.pd-capabilites {
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.pd-quality-system {
+    a:hover {
+        color: #9d1c20 !important;
+    }
+}
+
+.columBoxitemExtend {
+    p {
+        font-style: normal !important;
+        text-shadow: none !important;
+        font-size: 1rem !important;
+    }
+}
+
+.custom-margin {
+    .parallaxScrollingSction {
+        p {
+            margin-bottom: 5px;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+    }
+}

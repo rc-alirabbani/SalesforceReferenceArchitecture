@@ -1,0 +1,43 @@
+{
+  "name": "Link Button With Compare Modal",
+  "description": "Select a button URL component",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+        {
+          "id": "linkbutton",
+          "name": "Custom Button Configurations",
+          "description": "This component will display button and its URL or Link",
+          "attribute_definitions": [
+                {
+                    "id": "isModalChecked",
+                    "name": "Compare Differences Modal",
+                    "description": "Open Compare Differences Modal",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "buttonText",
+                    "name": "Button for Text Editor",
+                    "description": "This is the button for text content area",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "tileLink",
+                    "name": "Link on Anchor Button",
+                    "description": "Provide the Link URL of Anchor Button.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtab",
+                    "name": "New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                }
+            ]
+        }
+    ],
+  "region_definitions": []
+}

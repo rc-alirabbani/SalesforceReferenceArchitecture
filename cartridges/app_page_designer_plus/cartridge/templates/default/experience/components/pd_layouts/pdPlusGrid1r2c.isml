@@ -1,0 +1,23 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceLayouts/layout.css');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusGridLayout.css');
+</isscript>
+
+<div class="pdplus-component pdplus-1c-2r ${pdict.bgImageParallax} ${pdict.customCss}"  <isif condition="${pdict.BGImageProperties}"><isprint value="${pdict.BGImageProperties}" encoding="off" /></isif>>
+    <div class="bgcolor-overlay" style= "background-color:${pdict.bgOverlay}"></div>
+    <div class="pdplus-grid-wrapper" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+        <iscomment> If checkbox is clicked className Container will be added here else container-fluid className will be added </iscomment>
+        <div class="${pdict.isContainer}" style="max-width: ${pdict.maxWidth};">
+            <div class="row align-items-${pdict.verticalAlignment} justify-content-${pdict.horizontalAlginment}">
+                <isif condition="${pdict.removeGutter === true}">
+                    <isprint value="${pdict.regions.pdPlusColumn1.setClassName("region col-12 col-sm-6 px-0").render()}" encoding="off" />
+                    <isprint value="${pdict.regions.pdPlusColumn2.setClassName("region col-12 col-sm-6 px-0").render()}" encoding="off" />
+                <iselse/>
+                    <isprint value="${pdict.regions.pdPlusColumn1.setClassName("region col-12 col-sm-6").render()}" encoding="off" />
+                    <isprint value="${pdict.regions.pdPlusColumn2.setClassName("region col-12 col-sm-6").render()}" encoding="off" />
+                </isif>
+            </div>
+        </div>
+    </div>
+</div>

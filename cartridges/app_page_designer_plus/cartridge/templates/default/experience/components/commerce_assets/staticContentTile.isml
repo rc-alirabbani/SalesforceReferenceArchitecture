@@ -1,0 +1,37 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/imageAndTextCommon.css');
+</isscript>
+
+<div class="static-tile-wrapper">
+    <div class="static-tile-heading text-center">
+        <h3><isprint value="${pdict.headingText}" encoding="off" /></h3>
+    </div>
+
+    <div class="static-tile-desc">
+        <isprint value="${pdict.richText}" encoding="off" />
+    </div>
+
+    <figure class="static-tile-fig">
+        <picture>
+            <source srcset="${pdict.imgFile.src.tablet}" media="(min-width: 768px)"/>
+            <source srcset="${pdict.imgFile.src.desktop}" media="(min-width: 1024px)"/>
+            <img
+                class="photo-tile-image image-fluid"
+                src="${pdict.imgFile.src.mobile}"
+                style="--focal-point-x:${pdict.imgFile.focalPointX}; --focal-point-y:${pdict.imgFile.focalPointY}"
+                <isif condition="${pdict.image.alt}">alt="${pdict.imgFile.alt}" title="${pdict.imgFile.alt}"</isif>
+            />
+        </picture>
+    </figure>
+
+    <isif condition="${pdict.buttonText}">
+        <div class="static-tile-btn">
+            <button class="btn btn-default">
+                <a href="${pdict.titleLink}">
+                    <isif condition="${pdict.buttonText}"><isprint value="${pdict.buttonText}" encoding="off" /></isif>
+                </a>
+            </button>
+        </div>
+    </isif>
+</div>

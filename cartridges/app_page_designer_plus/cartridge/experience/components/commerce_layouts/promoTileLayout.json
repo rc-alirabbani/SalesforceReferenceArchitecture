@@ -1,0 +1,27 @@
+{
+    "name": "Promo Tiles layout",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "promoTileSettings",
+            "name": "Promo Tile Settings",
+            "description": "The Layout display of Promo Tile.",
+            "attribute_definitions": [
+                {
+                    "id": "promoTitle",
+                    "name": "Promos Title",
+                    "description": "Promo Tiles title for collapsible",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id": "promoTileLayout",
+            "name": "Promo Tiles",
+            "component_type_exclusions": []
+        }
+    ]
+}

@@ -4,26 +4,171 @@
     "group": "pd_assets",
     "attribute_definition_groups": [
         {
+            "id": "customClassSetting",
+            "name": "Asset Custom Class",
+            "description": "Add Custom Class For Override Style",
+            "attribute_definitions": [
+                {
+                    "id": "customClass",
+                    "name": "Set Custom Class",
+                    "description": "Add Custom Class For Override Style",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "h1Configurations",
+            "name": "Collapsible Heading Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "accodionItem",
+                    "name": "Collapsible Heading Text",
+                    "description": "Add collapsible heading text",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id":"h1Font",
+                    "name":"Heading Font Family",
+                    "description":"Controls the font family for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"fontTextSize",
+                    "name":"Heading Font Size",
+                    "description":"Controls the font size for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"fontMargin",
+                    "name":"Set Heading Marging",
+                    "description":"Controls marging for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"fontPadding",
+                    "name":"Set Heading Padding",
+                    "description":"Controls Parging for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1FontColor",
+                    "name":"Heading Font Color",
+                    "description":"Controls the font color for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1FontShadow",
+                    "name":"Heading Font Shadow Color (2px 2px 2px #000)",
+                    "description":"Controls the font Shadow color for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1FontWeight",
+                    "name":"Heading Font Weight",
+                    "description":"Controls the font weight for heading",
+                    "type":"enum",
+                    "values":[
+                        "300",
+                        "400",
+                        "500",
+                        "600",
+                        "700"
+                    ],
+                    "required":false
+                }
+            ]
+        },
+        {
+            "id": "para1Configurations",
+            "name": "Colapsible Description Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "accordionDetail",
+                    "name": "Collapsible Description Text",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id":"para1Font",
+                    "name":"Description Font Family",
+                    "description":"Controls the font family for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1TextSize",
+                    "name":"Description Font Size",
+                    "description":"Controls the font size for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Margin",
+                    "name":"Set Description Marging",
+                    "description":"Controls marging for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Padding",
+                    "name":"Set Description Padding",
+                    "description":"Controls Parging for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Color",
+                    "name":"Description Font Color",
+                    "description":"Controls the font color for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1FontShadow",
+                    "name":"Description Font Shadow Color (2px 2px 2px #000)",
+                    "description":"Controls the font Shadow color for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Weight",
+                    "name":"Description Font Weight",
+                    "description":"Controls the font weight for description",
+                    "type":"enum",
+                    "values":[
+                       "300",
+                       "400",
+                       "500",
+                       "600",
+                       "700"
+                    ],
+                    "required":false
+                }
+            ]
+        },
+        {
             "id": "accordionComponent",
             "name": "Collapsible Configurations",
             "description": "This component will display Collapsible.",
             "attribute_definitions": [
                 {
-                    "id": "accodionItem",
-                    "name": "Collapsible Item",
-                    "type": "string",
-                    "required": true
+                    "id": "collapsibleActive",
+                    "name": "Collapsible Open By Defualt",
+                    "type": "boolean",
+                    "required": false
                 },
                 {
-                    "id": "accordionDetail",
-                    "name": "Collapsible Item Detail",
-                    "type": "markup",
-                    "required": true
-                },
-                {
-                    "id": "itemdetailColor",
-                    "name": "Collapsible Item Detail text Color",
-                    "description": "Set item Detail text Color",
+                    "id": "itemHeadingbgColor",
+                    "name": "Collapsible Item Background Color",
+                    "description": "Set Background Color",
                     "required": false,
                     "type": "custom",
                     "editor_definition": {
@@ -31,69 +176,57 @@
                     }
                 },
                 {
-                  "id": "itemHeadingbgColor",
-                  "name": "Collapsible Item Background Color",
-                  "description": "Set Background Color",
-                  "required": false,
-                  "type": "custom",
-                  "editor_definition": {
-                      "type": "themer.colorpicker"
-                  }
-              },
-              
-              {
-                  "id": "HeadingbgColorAlpha",
-                  "name": "Specify Background Color Alpha between 10 and 100",
-                  "description": "Set Background Color alpha between 10 and 100",
-                  "type": "enum",
-                  "default_value": 100,
-                  "values": [
-                      10,
-                      20,
-                      30,
-                      40,
-                      50,
-                      60,
-                      70,
-                      80,
-                      90,
-                      100
-                  ],
-                  "required": false
-              },
-              
-              {
-                "id": "itemHeadingTextColor",
-                "name": "Collapsible Item Text Color",
-                "description": "Set Background Color",
-                "required": false,
-                "type": "custom",
-                "editor_definition": {
-                    "type": "themer.colorpicker"
+                    "id": "HeadingbgColorAlpha",
+                    "name": "Specify Background Color Alpha between 10 and 100",
+                    "description": "Set Background Color alpha between 10 and 100",
+                    "type": "enum",
+                    "default_value": 100,
+                    "values": [
+                        10,
+                        20,
+                        30,
+                        40,
+                        50,
+                        60,
+                        70,
+                        80,
+                        90,
+                        100
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "itemHeadingTextColor",
+                    "name": "Collapsible Item Text Color",
+                    "description": "Set Background Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "itemHeadingBorderColor",
+                    "name": "Collapsible Item Border Color",
+                    "description": "Set Background Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "accrBorderRadius",
+                    "name": "Please Select The Border Type Of Collapsible Item",
+                    "description": "Border radius type e.g (Square/Rounded/circled)",
+                    "type": "enum",
+                    "values": [
+                        "square",
+                        "rounded",
+                        "circled"
+                    ],
+                    "required": false
                 }
-            },
-            {
-              "id": "itemHeadingBorderColor",
-              "name": "Collapsible Item Border Color",
-              "description": "Set Background Color",
-              "required": false,
-              "type": "custom",
-              "editor_definition": {
-                  "type": "themer.colorpicker"
-              }
-            },
-              {
-                  "id": "accrBorderRadius",
-                  "name": "Please Select The Border Type Of Collapsible Item",
-                  "description": "Border radius type e.g (Square/Rounded/circled)",
-                  "type": "enum",
-                  "values": [
-                      "square",
-                      "rounded",
-                      "circled"
-                  ],
-                  "required": false
-              }
             ]
         }
     ],

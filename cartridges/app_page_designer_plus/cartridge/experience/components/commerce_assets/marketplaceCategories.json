@@ -1,0 +1,22 @@
+{
+    "name": "Marketplace Category",
+    "description": "Marketplace category tile with icon.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "marketplaceCategory",
+            "name": "Marketplace Category",
+            "description": "Specify the ID for marketplace category.",
+            "attribute_definitions": [
+                {
+                    "id": "marketplaceCategory",
+                    "name": "Marketplace Category ID",
+                    "description": "Select category to be displayed on marketplace page.",
+                    "type": "category",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

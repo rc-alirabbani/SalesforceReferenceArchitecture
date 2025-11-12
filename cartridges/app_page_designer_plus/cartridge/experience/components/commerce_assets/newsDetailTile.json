@@ -1,0 +1,36 @@
+{
+    "name": "News Detail Component",
+    "description": "News Component with Heading, Date and Detail Text",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "newsTileDetailCompnent",
+            "name": "News Detail Component",
+            "description": "News Detail to be Displayed.",
+            "attribute_definitions": [
+                {
+                    "id": "newsHeading",
+                    "name": "News Tile Component Heading",
+                    "description": "News Tile Heading to be displayed.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "newsTileDate",
+                    "name": "News Tile Date",
+                    "description": "News Tile date to be displayed. e.g. Apr 30, 2024",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "newsDetail",
+                    "name": "News Detail text area",
+                    "description": "This is the News Detail rich text content area",
+                    "type": "markup",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

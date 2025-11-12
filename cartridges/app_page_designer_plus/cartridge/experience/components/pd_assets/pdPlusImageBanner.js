@@ -25,7 +25,7 @@ module.exports.render = function (context) {
     if (content.tileLink) {
         model.tileLink = content.tileLink;
     } else {
-        model.tileLink = 'javascript:void(0)';
+        model.tileLink = '#';
     }
 
     model.tileNewtab = content.tileNewtab;
@@ -79,7 +79,7 @@ module.exports.render = function (context) {
         model.styleTitleColor = 'style="color: ' + content.imgTitleColor.value + '; "';
     }   
 
-    /* imgBanner Caption Color and Alpha Property*/
+    /* imgBanner Caption Color and Alpha Property */
     model.imageBannerStyles = 'style="';
     if (content.imgBannerCaptionBgColor) {
         model.imageBannerStyles += 'background-color: ' + content.imgBannerCaptionBgColor.value + '; ';
@@ -126,7 +126,7 @@ module.exports.render = function (context) {
         model.borderRadiusBtn = 'circled-bordered';
     }
 
-    /* Button Bakcground color*/
+    /* Button Bakcground color */
 
     model.backgroundColorbtn = 'style="';
     if (content.btnBackgroundColor) {
@@ -138,7 +138,7 @@ module.exports.render = function (context) {
         model.styleBtnTextColor += 'background-color: ' + content.btnTextColor.value + '; ';
     }
 
-        /* Button Size */
+    /* Button Size */
     if (content.btnsize === 'small') {
         model.btnwidthsize = 'btn-sm';
     } else if (content.btnsize === 'medium') {
@@ -152,13 +152,13 @@ module.exports.render = function (context) {
     if (content.aspectRation === 'auto') {
         model.imgAspectRatio = 'auto';
     } else if (content.aspectRation === 'HD Images and Videos') {
-        model.imgAspectRatio = 'hd-images-and-videos'; /*HD Images & Video Aspect Ration*/
+        model.imgAspectRatio = 'hd-images-and-videos'; /* HD Images & Video Aspect Ration */
     } else if (content.aspectRation === 'Standard Monitors') {
-        model.imgAspectRatio = 'standard-monitor';     /*Standard Monitor Aspect Ration*/
+        model.imgAspectRatio = 'standard-monitor';     /* Standard Monitor Aspect Ration */
     } else if (content.aspectRation === 'Classic Films') {
-        model.imgAspectRatio = 'classic-films';  /*Classic Films Aspect Ration*/
+        model.imgAspectRatio = 'classic-films';  /* Classic Films Aspect Ration */
     } else if (content.aspectRation === 'Cenimascope') {
-        model.imgAspectRatio = 'cenimascope';  /*Cenimascope Aspect Ration*/
+        model.imgAspectRatio = 'cenimascope';  /* Cenimascope Aspect Ration */
     }
 
     model.imgBannerDetail = content.imgBannerDetail ? content.imgBannerDetail : '';

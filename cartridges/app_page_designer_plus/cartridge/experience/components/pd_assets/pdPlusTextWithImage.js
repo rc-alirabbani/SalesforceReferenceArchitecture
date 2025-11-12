@@ -3,6 +3,7 @@
 var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
 var ImageTransformation = require('*/cartridge/experience/utilities/ImageTransformation.js');
+
 /**
  * Render logic for the storefront.photoTile component.
  * @param {dw.experience.ComponentScriptContext} context The Component script context object.
@@ -42,7 +43,7 @@ module.exports.render = function (context, modelIn) {
     if (content.tileLink) {
         model.tileLink = content.tileLink;
     } else {
-        model.tileLink = 'javascript:void(0)';
+        model.tileLink = '#';
     }
 
     model.tileNewtab = content.tileNewtab;

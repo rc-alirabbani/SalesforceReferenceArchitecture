@@ -6,7 +6,7 @@
     assets.addCss('/css/experience/pdPlusStorePage.css');
   </isscript>
 
-  <div class="storepage pdPlus-wrapper" id="${pdict.page.ID}">
+  <div class="storepage pd-plus-wrapper" id="${pdict.page.ID}">
     <isprint value="${pdict.regions.main.render()}" encoding="off" />
   </div>
 </isdecorate>

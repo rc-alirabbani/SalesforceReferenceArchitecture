@@ -1,0 +1,10 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceLayouts/layout.css');
+</isscript>
+
+<div class="mobile-3r-2c1">
+    <div class="row mx-n2 grid-row">
+        <isprint value="${pdict.regions.categoryItem.setClassName("region col-md-5-column customClass").render()}" encoding="off"/>
+    </div>
+</div>

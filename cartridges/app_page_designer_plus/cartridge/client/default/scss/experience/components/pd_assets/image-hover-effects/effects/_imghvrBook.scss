@@ -1,3 +1,9 @@
+/* stylelint-disable at-rule-no-unknown */
+
+@use "sass:color";
+
+/* stylelint-enable at-rule-no-unknown */
+
 /* imghvr-book-open-*
    ----------------------------- */
 *[class^="imghvr-book-open-"],
@@ -11,7 +17,7 @@
         &::before,
         &::after {
             content: "";
-            background-color: darken($figcaption-bg, 40%);
+            background-color: color.adjust($figcaption-bg, $lightness: -40%);
             opacity: 0;
             transition: all 0.45s ease;
             position: absolute;
@@ -47,14 +53,24 @@
         }
 
         &::before {
-            background-image: linear-gradient(to right, transparent 60%, rgba(0, 0, 0, 0.1) 99%, rgba(0, 0, 0, 0.15) 100%);
+            background-image: linear-gradient(
+                to right,
+                transparent 60%,
+                rgba(0 0 0 / 10%) 99%,
+                rgba(0 0 0 / 15%) 100%
+            );
             left: 0;
             transform: rotateY(90deg);
             transform-origin: 100% 50%;
         }
 
         &::after {
-            background-image: linear-gradient(to left, transparent 60%, rgba(0, 0, 0, 0.12) 99%, rgba(0, 0, 0, 0.15) 100%);
+            background-image: linear-gradient(
+                to left,
+                transparent 60%,
+                rgb(0 0 0 / 12%) 99%,
+                rgb(0 0 0 / 15%) 100%
+            );
             right: 0;
             transform: rotateY(-90deg);
             transform-origin: 0 50%;

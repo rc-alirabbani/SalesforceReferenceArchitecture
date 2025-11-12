@@ -1,0 +1,49 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/contactContentTile.css');
+</isscript>
+
+<div class="contact-tile-container">
+    <div class="contact-title-heading">
+        <figure class="content-tile-fig">
+            <picture>
+                <source srcset="${pdict.imgFile.src.tablet}" media="(min-width: 768px)"/>
+                <source srcset="${pdict.imgFile.src.desktop}" media="(min-width: 1024px)"/>
+                <img
+                    class="photo-tile-image image-fluid"
+                    src="${pdict.imgFile.src.mobile}"
+                    style="--focal-point-x:${pdict.imgFile.focalPointX}; --focal-point-y:${pdict.imgFile.focalPointY}"
+                    <isif condition="${pdict.image.alt}">alt="${pdict.imgFile.alt}" title="${pdict.imgFile.alt}"</isif>
+                />
+            </picture>
+        </figure>
+        <div class="content-tile-heading">
+            <h3><isprint value="${pdict.headingText}" encoding="off" /></h3>
+        </div>
+    </div>
+
+    <figure class="content-tile-fig d-none">
+        <picture>
+            <source srcset="${pdict.imgFile.src.tablet}" media="(min-width: 768px)"/>
+            <source srcset="${pdict.imgFile.src.desktop}" media="(min-width: 1024px)"/>
+            <img
+                class="photo-tile-image image-fluid"
+                src="${pdict.imgFile.src.mobile}"
+                style="--focal-point-x:${pdict.imgFile.focalPointX}; --focal-point-y:${pdict.imgFile.focalPointY}"
+                <isif condition="${pdict.image.alt}">alt="${pdict.imgFile.alt}" title="${pdict.imgFile.alt}"</isif>
+            />
+        </picture>
+    </figure>
+
+    <div class="content-tile-desc">
+        <isprint value="${pdict.richText}" encoding="off" />
+    </div>
+
+    <isif condition="${pdict.buttonText}">
+        <div class="content-tile-btn">
+            <button class="btn btn-default">
+                <a href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>${pdict.buttonText}</a>
+            </button>
+        </div>
+    </isif>
+</div>

@@ -29,11 +29,11 @@
                             src="//www.youtube.com/embed/${pdict.videoID}?title=${pdict.videoTitle}&autoplay=${pdict.videoAutoPlay}&muted=${pdict.videoMute}">
                         </iframe>
                     </div>
-      
+
                 <iselseif condition="${pdict.videoSelect == 'vimeo'}">
                     <iscomment> Vimeo Player Setting </iscomment>
                     <div class="embed-responsive embed-responsive-${pdict.videoResolution} ${pdict.classNameVideo}">
-                        <iframe class="embed-responsive-item full-scale" type="text/html" frameborder="0" 
+                        <iframe class="embed-responsive-item full-scale" type="text/html" frameborder="0"
                             src="//player.vimeo.com/video/${pdict.videoID}?title=${pdict.videoTitle}&autoplay=${pdict.videoAutoPlay}&portrait=1&byline=0&loop=${pdict.videoLoop}&muted=${pdict.videoMute}"
                             <isif condition="${pdict.videoFullScreen === 1}">allowFullScreen</isif>>
                         </iframe>
@@ -43,11 +43,11 @@
                     <iscomment> Daily Motion </iscomment>
                     <div class="embed-responsive embed-responsive-${pdict.videoResolution} ${pdict.classNameVideo}">
                         <iframe class="embed-responsive-item" scrolling="no" frameborder="0"
-                            src="//www.dailymotion.com/embed/video/${pdict.videoID}?autoplay=0&muted=${pdict.videoMute}" 
+                            src="//www.dailymotion.com/embed/video/${pdict.videoID}?autoplay=0&muted=${pdict.videoMute}"
                             <isif condition="${pdict.videoFullScreen === 1}">allowFullScreen</isif> <isif condition="${pdict.videoAutoPlay === 1}">allow="autoplay"</isif>>
                         </iframe>
                     </div>
-        
+
                 <iselseif condition="${pdict.videoSelect == 'html5VideoPlayer'}">
                     <iscomment> HTML5Video Player </iscomment>
                     <div class="embed-responsive embed-responsive-${pdict.videoResolution} ${pdict.classNameVideo}" tabindex="-1">
@@ -60,14 +60,14 @@
                 <iselseif condition="${pdict.videoSelect == 'custom-url'}">
                     <iscomment> Custom URL </iscomment>
                     <div class="embed-responsive embed-responsive-${pdict.videoResolution} ${pdict.classNameVideo}" tabindex="-1">
-                        <iframe class="embed-responsive-item" frameborder="0" scrolling="no" allow="autoplay" 
+                        <iframe class="embed-responsive-item" frameborder="0" scrolling="no" allow="autoplay"
                             src="${pdict.videoID}" <isif condition="${pdict.videoFullScreen === 1}">allowFullScreen</isif>>
                         </iframe>
                     </div>
 
                 <iselse/>
                     <p>${Resource.msg('player-not-found', 'pdplus_common', null)}</p>
-        
+
                 </isif>
             </div>
         </div>

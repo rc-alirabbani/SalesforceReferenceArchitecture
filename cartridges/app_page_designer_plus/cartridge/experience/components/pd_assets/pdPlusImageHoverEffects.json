@@ -23,6 +23,20 @@
                     "required": false
                 },
                 {
+                    "id": "isAbsoluteLayout",
+                    "name": "Enable Figure Caption Overlap",
+                    "description": "Enable Figure Capiton Overlap",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "imgScaleHover",
+                    "name": "Scale Image on Hover",
+                    "description": "Scale the image on hover",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
                     "id": "tilesBgColor",
                     "name": "Tiles background Color with opacity e.g rgba(0,0,0,0.1)",
                     "description": "Specify the background color with Opacity",
@@ -120,28 +134,16 @@
                     "required": false
                 },
                 {
-                    "id": "imgTitle",
-                    "name": "Title of Image",
-                    "description": "Title on overlay image",
+                    "id": "minWidthImage",
+                    "name": "Image Min. Width",
+                    "description": "Please add minimum width of image container",
                     "type": "string",
-                    "required": true
-                },
-                {
-                    "id": "imgParagraph",
-                    "name": "Paragraph of Image",
-                    "description": "Paragraph on overlay image",
-                    "type": "markup",
                     "required": false
                 },
                 {
-                    "id": "tilesLink",
-                    "name": "Link URL",
-                    "type": "url",
-                    "required": false
-                },
-                {
-                    "id": "tilesLinkText",
-                    "name": "Link Text",
+                    "id": "imageRadius",
+                    "name": "Image Container Border Radius",
+                    "description": "Border radius of image container",
                     "type": "string",
                     "required": false
                 },
@@ -197,6 +199,193 @@
                         "stretch"
                     ],
                     "default_value": "stretch",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "h1Configurations",
+            "name": "Asset Heading Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "imgTitle",
+                    "name": "Title of Image",
+                    "description": "Title on overlay image",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id":"h1Font",
+                    "name":"Heading Font Family",
+                    "description":"Controls the font family for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"fontTextSize",
+                    "name":"Heading Font Size",
+                    "description":"Controls the font size for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1LetterSpacing",
+                    "name":"Heading Font letter Spacing",
+                    "description":"Controls the letter spacing for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1LineHeight",
+                    "name":"Heading Font Line-Height",
+                    "description":"Controls the font Line-Height for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"fontMargin",
+                    "name":"Set Heading Marging",
+                    "description":"Controls marging for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"fontPadding",
+                    "name":"Set Heading Padding",
+                    "description":"Controls Parging for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1FontColor",
+                    "name":"Heading Font Color",
+                    "description":"Controls the font color for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1FontShadow",
+                    "name":"Heading Font Shadow Color (2px 2px 2px #000)",
+                    "description":"Controls the font Shadow color for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1FontWeight",
+                    "name":"Heading Font Weight",
+                    "description":"Controls the font weight for heading",
+                    "type":"enum",
+                    "values":[
+                       "300",
+                       "400",
+                       "500",
+                       "600",
+                       "700"
+                    ],
+                    "required":false
+                }
+            ]
+        },
+        {
+            "id": "para1Configurations",
+            "name": "Asset Description Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "imgParagraph",
+                    "name": "Paragraph of Image",
+                    "description": "Paragraph on overlay image",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id":"para1Font",
+                    "name":"Description Font Family",
+                    "description":"Controls the font family for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1TextSize",
+                    "name":"Description Font Size",
+                    "description":"Controls the font size for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1LetterSpacing",
+                    "name":"Heading Font letter Spacing",
+                    "description":"Controls the letter spacing for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1LineHeight",
+                    "name":"Heading Font Line-Height",
+                    "description":"Controls the font Line-Height for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Margin",
+                    "name":"Set Description Marging",
+                    "description":"Controls marging for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Padding",
+                    "name":"Set Description Padding",
+                    "description":"Controls Parging for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Color",
+                    "name":"Description Font Color",
+                    "description":"Controls the font color for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1FontShadow",
+                    "name":"Description Font Shadow Color (2px 2px 2px #000)",
+                    "description":"Controls the font Shadow color for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Weight",
+                    "name":"Description Font Weight",
+                    "description":"Controls the font weight for description",
+                    "type":"enum",
+                    "values":[
+                        "300",
+                        "400",
+                        "500",
+                        "600",
+                        "700"
+                    ],
+                    "required":false
+                }
+            ]
+        },
+        {
+            "id": "assetCTAConfigurations",
+            "name": "CTA Configurations",
+            "description": "CTA configurations for this component.",
+            "attribute_definitions": [
+                {
+                    "id": "linkBoxItem",
+                    "name": "Link on List Box Item",
+                    "description": "Provide the Link URL of Box item.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "boxNewtab",
+                    "name": "Link New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
                     "required": false
                 }
             ]

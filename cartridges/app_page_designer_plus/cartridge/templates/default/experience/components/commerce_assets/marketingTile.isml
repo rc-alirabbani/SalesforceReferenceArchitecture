@@ -1,0 +1,28 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+
+<div class="ITC-container">
+    <div class="row ITC-row">
+        <div class="col-12">
+            <figure class="ITC-figure">
+                <a href="${pdict.Link}">
+                    <img
+                        src="${pdict.image}"
+                        alt="${pdict.textHeadline}"
+                    />
+                </a>
+                <div>
+                     <isprint value="${pdict.textHeadline ? pdict.textHeadline : ''}" encoding="off"/>
+                </div>
+                <div>
+                     <isprint value="${pdict.displayName ? pdict.displayName : ''}" encoding="off"/>
+                </div>
+                <div>
+                     <isprint value="${pdict.customClass ? pdict.customClass : ''}" encoding="off"/>
+                </div>
+            </figure>
+        </div>
+    </div>
+</div>
+

@@ -34,8 +34,63 @@ module.exports.render = function (context) {
         model.imageHoverEffectType = '';
     }
 
+    /* Image Scale on Hover Checkbox */
+    model.imgScaleHover = content.imgScaleHover;
+    model.isAbsoluteLayout = content.isAbsoluteLayout ? 'captionAbsoluteLayout' : '';
     model.tilesLink = content.tilesLink ? content.tilesLink : '#';
     model.tilesLinkText = content.tilesLinkText;
+    model.minWidth = content.minWidth ? content.minWidth : null;
+    model.minWidthImage = content.minWidthImage ? content.minWidthImage : null;
+    model.imageRadius = content.imageRadius ? content.imageRadius : null;
+
+    if (content.linkBoxItem) {
+        model.linkBoxItem = content.linkBoxItem;
+    } else {
+        model.linkBoxItem = '#';
+    }
+
+    model.boxNewtab = content.boxNewtab;
+
+    /* Asset Heading 1 Style */
+    
+    model.h1Configurations = {
+        font: content.h1Font ? content.h1Font : null,
+        fontSize: content.fontTextSize ? content.fontTextSize : '1em',
+        marginHeading: content.fontMargin ? content.fontMargin : '0',
+        paddingHeading: content.fontPadding ? content.fontPadding : '0',
+        fontColor: content.h1FontColor ? content.h1FontColor : '#000',
+        fontWeight: content.h1FontWeight ? content.h1FontWeight : null,
+        fontShadow: content.h1FontShadow ? content.h1FontShadow : null,
+        fontSpacing: content.h1LetterSpacing ? content.h1LetterSpacing : null,
+        fontHeight: content.h1LineHeight ? content.h1LineHeight : null
+    };
+
+    /* Asset Paragraph 1 Style */
+    model.para1Configurations = {
+        font: content.para1Font ? content.para1Font : null,
+        fontSize: content.para1TextSize ? content.para1TextSize : '1em',
+        marginHeading: content.para1Margin ? content.para1Margin : '0',
+        paddingHeading: content.para1Padding ? content.para1Padding : '0',
+        fontColor: content.para1Color ? content.para1Color : '#000',
+        fontWeight: content.para1Weight ? content.para1Weight : null,
+        para1Shadow: content.para1FontShadow ? content.para1FontShadow : null,
+        paraFontSpacing: content.para1LetterSpacing ? content.para1LetterSpacing : null,
+        paraFontHeight: content.para1LineHeight ? content.para1LineHeight : null,
+    };
+
+    /* Button Style */
+    model.assetCTABorderRadius = content.assetCTABorderRadius ? content.assetCTABorderRadius : '0px';
+    model.assetCTALabel = content.assetCTALabel ? content.assetCTALabel : null;
+    // model.assetCTATitle = content.assetCTATitle ? content.assetCTATitle : null;
+    // model.assetCTAURL = content.assetCTAURL ? content.assetCTAURL : null;
+    model.tilesLink = content.tilesLink ? content.tilesLink : '#';
+    model.tilesLinkText = content.tilesLinkText;
+
+    model.assetCTABgColor = content.assetCTABgColor ? content.assetCTABgColor : '#ee2e23';
+    model.assetCTATextColor = content.assetCTATextColor ? content.assetCTATextColor : '#ffffff';
+
+    model.assetCTAHoverBgColor = content.assetCTAHoverBgColor ? content.assetCTAHoverBgColor : '#ee2e23';
+    model.assetCTAHoverTextColor = content.assetCTAHoverTextColor ? content.assetCTAHoverTextColor : '#ffffff';
 
     if (content.tilesBgColor || content.tilesTextColor) {
         model.figCaptionStyle = 'style="';

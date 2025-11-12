@@ -121,7 +121,7 @@
 
     .bnr-img img {
         backface-visibility: hidden;
-        image-rendering: optimizeQuality;
+        image-rendering: optimizequality;
         transition: transform 0.75s ease 0s, opacity 0.3s;
         max-width: 100%;
         vertical-align: middle;
@@ -132,11 +132,10 @@
 
 .bnr-caption-bg {
     position: relative;
-    // display: flex;
     flex-direction: column;
     padding: 60px;
     width: fit-content;
-    
+
     @include media-breakpoint-down(sm) {
         padding: 20px;
         margin: 0;
@@ -166,18 +165,16 @@
         top: 0;
         left: 0;
 
-        &.square {
-                border-radius: 0;
-        }
+        &.square { border-radius: 0; }
 
         &.rounded-bordered {
-                border-radius: 8px;
-                display: inline-block;
+            border-radius: 8px;
+            display: inline-block;
         }
 
         &.circled-bordered {
-                border-radius: 30px;
-                display: inline-block;
+            border-radius: 30px;
+            display: inline-block;
         }
     }
 }
@@ -186,24 +183,19 @@
     margin: 10px 0;
     min-height: 48px;
 
-    &.btn-block {
-        display: block;
-    }
+    &.btn-block { display: block; }
 
-    &.square {
-        border-radius: 0;
-    }
+    &.square { border-radius: 0; }
 
     &.rounded-bordered {
-            border-radius: 8px;
-            display: inline-block;
+        border-radius: 8px;
+        display: inline-block;
     }
 
     &.circled-bordered {
-            border-radius: 30px;
-            display: inline-block;
+        border-radius: 30px;
+        display: inline-block;
     }
-
 }
 
 .imageBanner {

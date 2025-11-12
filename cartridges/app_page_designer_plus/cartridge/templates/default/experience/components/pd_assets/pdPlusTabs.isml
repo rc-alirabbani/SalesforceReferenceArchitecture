@@ -6,9 +6,9 @@
 
 <iscomment> Tabs Nav Items </iscomment>
 <div class="tabItem">
-    <button class="nav-link" 
-        data-bs-toggle="tab" 
-        data-bs-target="${pdict.tabTitle}" 
+    <button class="nav-link"
+        data-bs-toggle="tab"
+        data-bs-target="${pdict.tabTitle}"
         role="tab"
         <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off"/></isif>>
         ${pdict.tabTitle}

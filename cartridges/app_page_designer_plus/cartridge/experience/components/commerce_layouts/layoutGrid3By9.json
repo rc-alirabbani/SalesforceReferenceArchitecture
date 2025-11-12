@@ -1,0 +1,33 @@
+{
+    "name": "1 By 1 Col Width (Mobile), 3 By 9 Col Width (Desktop)",
+    "description": "This is a layout component of 1 by 1 for Mobile and 3 by 9 column width for desktop/tablet.",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "componentSettings",
+            "name": "Component Settings",
+            "description": "The visual display of the container.",
+            "attribute_definitions": [
+                {
+                    "id": "customClass",
+                    "name": "Section Custom Class",
+                    "description": "Add Custom Class For Override Style",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id":"column1",
+            "name":"Column 1",
+            "component_type_exclusions": []
+        },
+        {
+            "id":"column2",
+            "name":"Column 2",
+            "component_type_exclusions": []
+        }
+    ]
+}
